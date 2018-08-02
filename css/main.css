@@ -37,9 +37,19 @@ body {
     margin: auto;
 }
 
+div#root {
+    margin-top: 7.8em;
+    min-height: 5em;
+}
+
 main {
     margin-top: 7.8em;
     min-height: 5em;
+}
+
+/* for highlighting old work that I'm leaving for now */
+main.old {
+    background-color: purple;
 }
 
 h1,h2,h3 {
