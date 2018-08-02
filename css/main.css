@@ -1,0 +1,362 @@
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Saira|Saira+Condensed|Saira+Extra+Condensed|Saira+Semi+Condensed|Do+Hyeon|Source+Serif+Pro');
+
+
+@font-face {
+    font-family: UrbanJungle;
+    src: url("/fonts/UrbanJungle.otf") format("opentype");
+}
+
+@font-face {
+    font-family: UrbanJungle;
+    font-weight: bold;
+    src: url("/fonts/UrbanJungle.otf") format("opentype");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: #F2F2F2;
+    overflow-y: scroll;
+
+}
+
+body {
+    font-family: Saira, sans-serif;
+    font-size: 1em;
+    color: #000000;
+    max-width: 1200px;
+    background: rgba(192, 192, 192, 1);
+    margin: auto;
+}
+
+main {
+    margin-top: 7.8em;
+    min-height: 5em;
+}
+
+h1,h2,h3 {
+    color: rgba(239, 132, 105, 1);
+}
+
+h1,h2 {
+    text-align: center;
+    padding-top: 1.5em;
+}
+
+h1 {
+    font-size: 1.8em;
+    font-weight: 280;
+    font-family: UrbanJungle, "Avenir Next", sans-serif;
+}
+
+h2 {
+    font-size: 1.4em;
+    font-weight: 200;
+    font-family: "Saira", sans-serif;
+}
+
+h3 {
+    font-size: 1.1em;
+    font-weight: 500;
+    font-family: "Do Hyeon", sans-serif;
+}
+
+p {
+    font-size: 0.85em;
+    font-family: 'Source Serif Pro', serif;
+}
+
+/*Specific Pages*/
+.about-text p {
+    margin: 2em 20em;
+}
+
+.store-table p {
+    text-align: center;
+}
+
+.contact-form {
+    width: 50%;
+    margin: auto;
+}
+
+.contact-form form fieldset p,
+.contact-form form fieldset input,
+.contact-form form fieldset textarea {
+    margin-left: 10px;
+    width: 90%;
+}
+
+.contact-form form fieldset textarea {
+    height: 80px;
+}
+
+.store-table {
+    margin-bottom: 20px;
+}
+
+/*Header*/
+
+.header-container {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 2.3em 0;
+    border-bottom: 3px solid rgba(239, 132, 105, 1);
+    background: linear-gradient(to top left, rgb(9, 9, 10),rgb(68, 68, 68));
+}
+
+.logo-container {
+    text-decoration: none;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+
+}
+
+.logo-container img {
+    display: block;
+}
+
+.logo-container.head-title {
+    padding: 0;
+    display: block;
+    font-weight: bold;
+    color: rgba(239, 132, 105, 1);
+}
+
+nav {
+    margin: 1.5em 0 0 5%;
+    position: relative;
+    top: 40px;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0 1.4em 0 0;
+    font-size: 0.9em;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #7D7C7D;
+}
+
+li a.active {
+    font-weight: 300;
+    color: rgba(239, 132, 105, 1);
+    border-bottom: 2px solid rgba(64, 249, 155, 1);
+}
+
+li a:hover {
+    color: #B6B6B6;
+}
+
+.core-info {
+    font-family: "Saira", sans-serif;
+    text-align: right;
+    font-size: 0.5em;
+    color: rgba(239, 132, 105, 1);
+    position: absolute;
+    left: 90%;
+    top: 0;
+}
+
+
+/*CSS Grid on cookie-grid container*/
+
+.cookie-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.cookie {
+    width: 47vw;
+    margin: 0 auto 30px;
+}
+
+.cookie-image {
+    display: block;
+    width: 47vw;
+}
+
+.cookie-info {
+    margin-top: 13px;
+}
+
+.cookie-info p {
+    font-size: 0.85em;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+
+
+/*Media Query - screen larger then 600px*/
+
+@media screen and (min-width : 600px) {
+    .cookie-grid {
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        margin-top: 54px;
+    }
+
+    .cookie {
+        width: 31vw;
+        margin: 0 auto 45px;
+
+    }
+
+    .cookie-image {
+        width: 31vw;
+    }
+
+    h1 {
+        padding-top: 1em;
+        padding-left: 1em;
+    }
+
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo-container {
+        margin-left: 2.3em;
+    }
+
+    .logo-container.head-title {
+        padding-left: 2.3em;
+    }
+
+    nav {
+        align-self: center;
+        margin: 0 0.8em 0 0;
+    }
+}
+
+@media screen and (min-width : 1200px) {
+    body {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .cookie {
+        width: 370px;
+    }
+
+    .cookie-image {
+        width: 370px;
+    }
+}
+
+/* Tables */
+
+table {
+    border: solid rgba(25, 25, 112, 1);
+    background-color: rgba(232,232,232,1);
+    margin: auto;
+    padding: 10px;
+}
+
+th, td {
+    padding: 2px;
+    border: 1px solid rgba(239, 132, 105, 1);
+    text-align: center;
+}
+
+th {
+    background-color: rgba(25, 25, 112, 1);
+    color: rgba(192, 192, 192, 1);
+}
+
+td.cell-totals {
+    background-color: rgba(25, 25, 112, 1);
+    font-weight: bold;
+    color: rgba(192, 192, 192, 1);
+}
+
+tfoot {
+    font-weight: bold;
+    background-color: rgba(25, 25, 112, 1);
+    color: rgba(192, 192, 192, 1);
+}
+
+/* Forms */
+form.store-form {
+    width: 25%;
+    margin: auto;
+
+}
+
+form.store-form div, 
+form.store-form fieldset {
+    display: flex;
+    justify-content: space-around;
+}
+
+form.store-form div button,
+div.contact-form div button {
+    margin: 5px;
+    padding: 5px;
+}
+
+form.store-form fieldset p, 
+form.store-form fieldset input {
+    margin: 3px;
+    padding: 3px;
+}
+
+fieldset {
+    border: 2px solid rgba(64, 249, 155, 1);
+    background-color: rgba(239, 132, 105, 1);
+
+}
+
+input {
+    width: 95%;
+}
+
+button {
+    border: 2px solid rgba(64, 249, 155, 1);
+    background-color: rgba(239, 132, 105, 1);
+    color: rgba(25, 25, 112, 1);
+    cursor: pointer;
+}
+
+/*Footer*/
+
+footer {
+    background: rgba(25, 25, 112, 1); 
+    padding: 3.3em;
+    text-align: center;
+}
+
+footer p {
+    font-family: Roboto, sans-serif;
+    font-size: 0.7em;
+    font-weight: 300;
+    color: #A4A4A4;
+    line-height: 130%;
+}
+
+footer p a {
+    text-decoration:none;
+    color: #A4A4A4;
+}
+
+footer img {
+    padding: 0.4em 0 1.3em 0;
+}
