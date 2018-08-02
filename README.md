@@ -1,3 +1,6 @@
+<!-- markdownlint-disable -->
+
+
 # Lab Salmon Cookie
 
 ## TODO
