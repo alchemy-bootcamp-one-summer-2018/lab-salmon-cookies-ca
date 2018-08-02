@@ -21,3 +21,13 @@
 ### Events
 
 * TBD
+
+### Components
+
+#### Notes
+
+* Each component has a template method, a render method, and a dom. template -> render -> dom. 
+* Template gets its data from the API, which is a data store and will eventually represent an actual database implementation. It is not a component.
+* html.js is the re-used method for all of the rendering.
+* app.js is the holding container for all of the rendered components
+* index.js writes directly to sales.html. It gets its input from app.js, and it once again uses html.js (which the containers use too).
