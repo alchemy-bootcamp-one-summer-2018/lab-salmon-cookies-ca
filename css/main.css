@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Bungee+Inline|Quicksand');
+
+body {
+    background-color: blanchedalmond;
+    font-family: 'Bree Serif', serif;
+}
+div {
+
+}
+#header {
+    background-color: blanchedalmond;
+    font-family: 'Bungee Inline', cursive;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%
+}
+#header p {
+    font-family: 'Bree Serif', serif;
+}
+#fishpic {
+    width: 300px;
+    content: center;
+}
+.nav {
+    background-color: paleturquoise;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#our-story {
+    height:200px;
+    background-color: palegreen;
+}
+.menu {
+    background-color:palegreen;
+    display: flex;
+    justify-content: space-evenly;
+    height: 150px;
+}
+#locations {
+    display: inline;
+    flex-direction: column;
+    background-color: teal;
+}
+table {
+    background-color: white;
+    
+}
+th {
+    width: 80px;
+}
+td {
+    padding: 5px;
+    text-align: center;
+}
