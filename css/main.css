@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Megrim');
+body {
+    background: #FDFDFD;
+}
+
+div {
+    background: #FAC9B8;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+table, th, td {
+    padding: 5px;
+    border: 2px solid #FDFDFD;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+tbody {
+    background: #FAC9B8;
+    font-family: 'Indie Flower', sans-serif;
+}
+
+address {
+    display: inline;
+}
+.location-totals {
+    background: #464646;
+    font-family: 'Indie Flower', sans-serif;
+    color: #FDFDFD;
+}
+
+#salmon-logo {
+    background: #FDFDFD;
+}
+
+#salmon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#main-header {
+    color: #FAC9B8;
+    font-family: 'Megrim', sans-serif;
+    text-align: center;
+}
+
+.headers {
+    font-family: 'Megrim', cursive;
+}
+
+#cookie-div {
+    background: #FAC9B8;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#gingersnap {
+    background-image: url("https://www.hummusapien.com/wp-content/uploads/2016/12/Healthy-Vegan-Ginger-Snap-Cookies100.jpg");
+    background-size: cover;
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+}
+
+#chocolate {
+    background-image: url("https://mt-backend-familycircle-environment-contentbucket-1qlli1qnqqj9z.s3.amazonaws.com/s3fs-public/styles/398x398/public/recipe/550_RU270229.jpg");
+    background-size: cover;
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+}
+
+#kitchen-sink {
+    background-image: url("https://www.krusteaz.com/sites/krusteaz.com/files/images/products/recipes/fullsize/krusteaz-toffee-cookie-bars_0.png");
+    background-size: cover;
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+}
+
+#oatmeal {
+    background-image: url("http://immaeatthat.com/wp-content/uploads/2015/03/brown-butter-oatmeal-cookies-stuffed-with-nutella-9.jpg");
+    background-size: cover;
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+}
+
+#submit-button {
+    background: #FDFDFD;
+}
+
+.cookie-header {
+    text-align: center;
+    font-family: 'Indie Flower', sans-serif;
+    background: #464646;
+}
