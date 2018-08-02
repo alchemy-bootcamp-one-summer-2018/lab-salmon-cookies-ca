@@ -31,3 +31,11 @@
 * html.js is the re-used method for all of the rendering.
 * app.js is the holding container for all of the rendered components
 * index.js writes directly to sales.html. It gets its input from app.js, and it once again uses html.js (which the containers use too).
+
+#### Plan
+
+* start at the top of the component tree, start discrete, and abstract one layer at a time while maintaining a functioning implementation in the actual dom (or sales.html).
+
+1. index.js
+2. app.js
+3. html.js
