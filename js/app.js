@@ -20,9 +20,9 @@
             let dom = template();
             let main = dom.querySelector('main');
 
-
-            main.appendChild(StoreTable.render());
-
+            let storeTable = new StoreTable;
+            
+            main.appendChild(storeTable.render());
 
             return dom;
 
