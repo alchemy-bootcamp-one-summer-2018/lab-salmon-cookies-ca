@@ -1,7 +1,6 @@
 (function(module) {
     let html = module.html;
     let StoreCard = module.StoreCard;
-
     let template = function() {
         return html`
         <section>
@@ -12,8 +11,8 @@
         `;
     };
 
-    let hourlyTotals = [];
     
+
     class StoreList {
         constructor(props) {
             this.stores = props.stores;
@@ -34,7 +33,6 @@
 
             this.updateCount(stores.length);
     
-            // update the "last" know fruits we saw
             this.lastStores = stores.slice();
         }
 

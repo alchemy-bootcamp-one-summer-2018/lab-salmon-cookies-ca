@@ -10,7 +10,6 @@
             this.totalSales = 0;
             
             this.generateSales();
-            console.log(this);
         }
         generateSales(){
             for(let i = 0; i < 14; i++) {
@@ -18,7 +17,6 @@
                 let cookieSales = custPerHour * this.avgCookies;
                 this.cookiesPerHour.push(cookieSales);
                 this.totalSales += cookieSales;
-                console.log(custPerHour, cookieSales);
             }
         }
     }
