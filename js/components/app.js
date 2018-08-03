@@ -2,36 +2,10 @@
 
 (function(module) {
     let html = module.html;
+    let storeApi = module.storeApi;
     let StoreList = module.StoreList;
- 
-
-    let stores = [{
-        name: 'Pike Place Market',
-        minCust: 23,
-        maxCust: 65,
-        avgCookies: 6
-    }, {
-        name: 'SeaTac Airport',
-        minCust: 3,
-        maxCust: 24,
-        avgCookies: 1
-    }, {
-        name: 'Seattle Center',
-        minCust: 11,
-        maxCust: 38,
-        avgCookies: 4
-    }, {
-        name: 'Capitol Hill',
-        minCust: 20,
-        maxCust: 38,
-        avgCookies: 2
-    }, {
-        name: 'Alki',
-        minCust: 2,
-        maxCust: 16,
-        avgCookies: 5
-    }];
-
+    let StoreForm = module.StoreForm;
+    
     let template = function() {
         return html`
         <header>
@@ -46,9 +20,24 @@
             let dom = template();
 
             let main = document.querySelector('main');
-            let storeList = new StoreList();
+
+            let stores = storeApi.load();
+
+            let storeList = new StoreList({
+                stores:store
+            });
+
+            let storeForm = new storeForm({
+                onAdd: function(store) {
+                    storeApi.add(store);
+                    storeList.update({
+                        stores:store
+                    });
+                }
+            });
 
             main.appendChild(storeList.render());
+            main.appendChild(storeForm.render());
             
             return dom;
         }
