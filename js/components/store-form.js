@@ -34,7 +34,7 @@
             let form = dom.querySelector('form');
 
             form.addEventListener('submit', (event) => {
-                 // #1 Prevent default posting of the form
+                // #1 Prevent default posting of the form
                 event.preventDefault();
         
                 // #2 Gather up data

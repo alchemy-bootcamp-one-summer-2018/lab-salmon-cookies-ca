@@ -2,7 +2,7 @@
 
 (function(module) {
     let html = module.html;
-    let template = function(fruit) {
+    let template = function(store) {
 
         return html`
             <tr>

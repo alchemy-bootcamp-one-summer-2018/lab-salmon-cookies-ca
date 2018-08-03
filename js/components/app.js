@@ -27,7 +27,7 @@
                 stores:store
             });
 
-            let storeForm = new storeForm({
+            let storeForm = new StoreForm({
                 onAdd: function(store) {
                     storeApi.add(store);
                     storeList.update({
@@ -43,6 +43,6 @@
         }
     }
 
-    module.App = App
+    module.App = App;
 
 })(window.module = window.module || {});
