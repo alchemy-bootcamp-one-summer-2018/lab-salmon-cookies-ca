@@ -24,13 +24,15 @@
         render() {
             let dom = template();
             this.table = dom.querySelector('table');
-
+            this.renderRow();
 
             return dom;
         }
 
 
     }
+
+    module.StoreTable = StoreTable;
 
 
 })(window.module = window.module || {});

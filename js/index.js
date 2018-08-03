@@ -2,7 +2,7 @@
 
 (function(module) {
 
-    let App = module.app;
+    let App = module.App;
     let root = document.getElementById('root');
 
     let app = new App();
