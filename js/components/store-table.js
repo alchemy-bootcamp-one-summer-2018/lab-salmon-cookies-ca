@@ -3,6 +3,8 @@
 (function(module) {
 
     let html = module.html; 
+    let TableRow = module.TableRow;
+
 
     let template = function() {
         return html`
@@ -15,15 +17,24 @@
     };
 
     class StoreTable {
+        constructor(props) {
+            this.stores = props.fruits;
+
+        }
 
 
         renderRow() {
+            console.log(TableRow);
+
+            let tableRow = new TableRow();
             
 
-            this.table.appendChild(html`<tr><td>I'm a cell</td></tr>`);
+            this.table.appendChild(tableRow.render());
         }
 
         render() {
+            let stores = this.stores;
+
             let dom = template();
             this.table = dom.querySelector('table');
             this.renderRow();
