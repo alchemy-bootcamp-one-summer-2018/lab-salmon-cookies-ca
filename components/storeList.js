@@ -1,38 +1,53 @@
-'use strict';
+// 'use strict';
 
-(function(module) {
+// (function(module) {
     
-    let html = module.html;
+//     let html = module.html;
+//     let StoreEntry = module.StoreEntry;
 
-    let template = function() {
+//     let template = function() {
 
-        return html`
-            <section>
-            <h1>This is Pat's Sales </h1>
-                <h2></h2>
-            <table> </table>
-            <ul> </ul>
-            </section>
-        `;
-    };
+//         return html`
+//             <section>
+//             <table>${store.name} </table>
+//             <ul> </ul>
+//             </section>
+//         `;
+//     };
 
-    class StoreList {
+//     class StoreList {
+//         constructor(props) {
+//             this.name = props.name;   
+//         }     
 
-       
+//         let storelist = new StoreList ;
 
-        render() {
+//         // update(props) {
+//         //     let stores = props.stores;
+//         // }
 
-            let dom = template();
-            let storeList = this.storeList;
 
-            this.ul = dom.querySelector('ul');
+//         // renderStores(store) {
+//         //     let storeEntry = new StoreEntry({
+//         //         store: store, 
+//         //     });
+//         //     this.ul.appendChild(storeEntry.render());
+//         // }
+        
+//         render() {
+
+//             let dom = template();
+//             let stores = this.stores;
+
+//             for(let i = 0; i < stores.length; i++) {
+//                 this.renderStore(stores[i]);
+//             }
            
-            return dom;
-        }
+//             return dom;
+//         }
     
-    }
+//     }
 
+//     module.StoreList = StoreList;
 
-    module.StoreList = StoreList;
-
-})(window.module = window.module || {});
+// })(window.module = window.module || {});

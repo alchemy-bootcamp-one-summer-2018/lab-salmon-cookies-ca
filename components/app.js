@@ -3,9 +3,7 @@
 (function(module) {
 
     let html = module.html;
-    let StoreList = module.StoreList;
     let StoreEntry = module.StoreEntry;
-
 
     let template = function() {
 
@@ -25,19 +23,21 @@
         render() {
 
             let dom = template();
+    
+            let main = dom.querySelector('main');
+            let pikesPlace = {
+                name:'Pike Place Market',
+                min: 23,
+                max: 65,
+                avg: 6,
+                key:'pike',
+                total: 0
+            };
+            let storeEntry = new StoreEntry ({
+                store: pikesPlace
 
-            // let main = dom.querySelector('main');
-            // let storeList = new StoreList ({
-            //     stores: stores
-            // });
-            
-            let store = [
-                'wooo'
-            ];
-
-
-            // main.appendChild(storeList.render());
-
+            });
+            main.appendChild(storeEntry.render());
             return dom;
         }
     
@@ -48,10 +48,6 @@
 })(window.module = window.module || {});
 
 
-//hello world
-// let test = 'Hello World!';
-
-// console.log('hello world', test);
 
 
    

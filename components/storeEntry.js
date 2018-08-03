@@ -3,26 +3,36 @@
 (function(module) {
     
     let html = module.html;
-    let StoreList = module.StoreList;
 
-    let template = function() {
+    let template = function(store) {
 
         return html`
-            <section>
             <p></p>
-
-            <ul></ul>
+            <tr>
+            <td>${store.name}</td>
+            <td>${store.min}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             
-            </section>
+            <td></td>
+            <td></td>
+            </tr> 
         `;
     };
 
     class StoreEntry {
+        constructor(props){
+            this.store = props.store;
+            console.log('working in constructor', this.store);
+
+        }
+
         render() {
 
-            let dom = template();
-            
-            this.ul = dom.querySelector('ul');
+            let dom = template(this.store);
+            console.log('working in render', this.store);
     
             return dom;
         }

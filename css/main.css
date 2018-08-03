@@ -1,0 +1,260 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700');
+
+* { 
+    font-family: 'Lato', sans-serif;
+    color:#212121;
+    
+}
+
+.navigation-bar {
+    width: 100%;
+    height: 50px;
+    background-color: #e8b238;
+    text-align: center;
+}
+
+
+.navigation-bar > a {
+    color:white;
+    text-decoration: none;
+    vertical-align: top;
+    margin-right: 20px;
+    height: 50px;       
+    line-height: 50px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+}
+.header {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    border-top: solid 10px #e76431;
+}
+
+#logo { justify-content: center;}
+
+#container {
+    width: 900px;
+    padding: 50px;
+    display: flex;
+    margin: 40px 0 40px 200px ;
+    background: white;
+}
+
+#top-banner {
+    display: flex;
+    height: 450px;
+    background-image: url("https://rosemarkcreative.com/wp-content/uploads/2018/07/photo-1453614512568-c4024d13c247.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
+} 
+
+#banner-container {
+    justify-content: center;
+    width: 900px;
+    margin-left: 450px;
+    margin-right: 50px;
+}
+
+#banner-cta {
+    font-weight: 400;
+    background: white;
+    padding: 15px 30px 15px;
+    margin-top: 95px;
+    margin-right: 70px;
+    width: 450px;
+    height: 250px; 
+    text-align: center;
+}
+
+#banner-head {
+    font-weight: 300;
+    font-size: 32px;
+   letter-spacing: 1px;
+   margin-top: 0px;
+   padding-bottom: 15px
+   
+}
+
+#banner-sub { 
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 30px;
+}
+
+.high-light { 
+    font-size: 16px;
+    font-weight: 400;
+    background: #3f3f3f;
+    color: white;
+    padding: 5px 10px;
+    font-family: serif;
+    font-style: italic;
+    
+}
+
+#about-image {
+    float: left;
+    padding:15px 0px;
+    margin-right: 30px;
+
+}
+
+#about {
+
+  padding-left: 40px;
+
+}
+
+/*buttons*/
+
+.btn {	
+    
+    height: 40px;	
+    width: 250px;	
+    border-radius: 22.5px;
+    color: white;
+    font-size: 12px;
+    border:none;
+    background-color: #e76431;
+    text-transform: uppercase;
+    letter-spacing:2px;
+    padding: 15px;
+    text-decoration: none;
+    
+}
+
+
+H1 {
+   font-size: 30px;
+   letter-spacing: 1px;
+  
+}
+
+H2 {
+    font-size: 28px;
+    letter-spacing: 1px;
+    font-weight: 300;
+ }
+
+p {
+    font-size: 18px;
+    letter-spacing: .5px;
+    font-weight: 300;
+}
+
+body {
+    background: #e5d5c440;
+}
+footer {
+    background: #3f3f3f;
+    color: white;
+    text-align: center;
+    height: 70;
+    padding: 30px;
+}
+
+/* Sales Page*/
+
+#sales-head h2 {
+    font-weight: 300;
+    font-size: 32px;
+   
+}
+
+#sales-form p {
+    font-size: 15px;
+    padding:0px;
+    margin:0px
+
+}
+
+#sales-form{
+    font-weight: 400;
+    background: white;
+    padding: 30px;
+    margin: 0;
+    width: 650px;
+    height: 100%;
+    text-align: center;
+}
+
+#form-btn  {
+    height: 40px;	
+    width: 250px;	
+    border-radius: 22.5px;
+    color: white;
+    font-size: 12px;
+    border:none;
+    background-color: #e76431;
+    text-transform: uppercase;
+    letter-spacing:2px;
+}
+.input {
+    width: 200px;
+    height: 20px;
+    /* border-radius: 5px; */
+    border: 0px;
+    background: #f9f9f9;
+    border-bottom: solid 1px #e8b238;
+    margin-bottom: 15px;
+    font-size: 12px;
+    padding: 10px;
+}
+
+
+.table {
+    border-collapse:collapse;
+    border-spacing:0;
+    border-color:#ccc;
+    margin:0px auto;
+    table-layout: fixed; 
+    width: 90%;
+    margin:auto;
+}
+
+.top-row {
+    background-color:#e8b238;
+}
+.table td{
+    font-family:sans-serif;
+    font-size:14px;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    border-color:#ccc;
+    color:#333;
+    background-color:#fff;
+}
+
+.table th{font-family: sans-serif;
+    font-size:14px;font-weight:normal;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    background-color:#e8b238;
+    color:#fff;
+
+}
+.table .table-1{
+    width: 40px;
+    vertical-align:top;
+}
+
+.table .table-2{
+    width: 40px;
+    background-color:#f9f9f9;
+    vertical-align:top;
+}
+
+.top-row {width: 170px;
+}
+
+.last-row {width: 170px;
+}
