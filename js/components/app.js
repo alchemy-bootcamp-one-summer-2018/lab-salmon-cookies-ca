@@ -26,6 +26,8 @@
                 stores: stores
             });
 
+            console.log(storeTable);
+
             
             
             

@@ -29,6 +29,10 @@
     };
 
     class StoreTable {
+
+        constructor(props) {
+            this.stores = props.stores;
+        }
         
 
         render() {
