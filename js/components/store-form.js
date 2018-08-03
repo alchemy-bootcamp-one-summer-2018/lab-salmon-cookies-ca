@@ -42,11 +42,7 @@
         render() {
             let dom = template();
 
-
-
-
             return dom;
-
 
         }
 

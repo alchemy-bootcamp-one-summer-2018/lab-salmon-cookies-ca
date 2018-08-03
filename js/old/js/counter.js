@@ -4,6 +4,8 @@
     var stores = module.stores;
     var countSpan = document.getElementById('store-count');
 
+    console.log('store-count');
+    
     function updateCounter() {
         countSpan.textContent = stores.length;
     }
