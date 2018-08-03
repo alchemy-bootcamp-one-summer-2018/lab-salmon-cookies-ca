@@ -52,9 +52,6 @@
                     storeList.update({
                         stores: stores
                     });
-                    // tableFooter.update({
-                    //     stores: stores
-                    // });
                 }
             });
 

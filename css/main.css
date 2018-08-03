@@ -6,7 +6,7 @@ header, section, footer, aside, nav, article, figure, figcaption {
 
 body {
     color: #666666;
-    background-color white;
+    background-color: grey;
     background-position: center;
     font-family: Georgia, times, serif;
     line-height: 1.4em;

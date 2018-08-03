@@ -62,7 +62,8 @@
                 if(lastStores.includes(store)) continue;
 
                 this.updateStore(store);
-                this.updateFooter(store);
+                this.replaceFooter(stores);
+                console.log('finished update');
             }
 
             // update the "last" know Stores we saw
@@ -77,9 +78,29 @@
             this.tbody.appendChild(storeRow.render());
         }
 
+        // remove previous footer if needing to update
+        replaceFooter() {
+            // remove old footer
+            this.tfoot.children[0].remove();
+
+            // add new footer
+            let stores = this.stores;
+            this.tfoot.appendChild(this.updateFooter(stores));
+        }
+
+        // remove previous footer if needing to update
+        deleteFooter() {
+            try {
+                this.tfoot.children[0].remove();
+            }
+            catch (err) {
+                console.log('nothing to remove');
+            }
+        }
+
         // update footer
         updateFooter(props) {
-            let stores = props.slice();
+            let stores = props;
             let footer = new Footer({
                 stores: stores
             });
@@ -94,6 +115,7 @@
             for(let i = 0; i < stores.length; i++) {
                 this.updateStore(stores[i]);
             }
+
             this.tfoot = dom.querySelector('tfoot');
             this.tfoot.appendChild(this.updateFooter(stores));
             return dom;

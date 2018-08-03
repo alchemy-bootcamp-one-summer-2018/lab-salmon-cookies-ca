@@ -25,7 +25,7 @@
 
           </form><br>
 
-          <p id="form-error"></p>
+          <p id = 'form-error' class="error"></p>
 
         </div>
         `;
@@ -40,8 +40,7 @@
             let dom = template();
 
             let form = dom.querySelector('form');
-            this.error = dom.querySelector('form-error'); //or get element by id?
-            console.log(this.error);
+            let error = dom.querySelector('p.error');
 
             // listen for form submission
             form.addEventListener('submit', (event) => {
@@ -71,7 +70,7 @@
                 catch (err) {
                     // #4 Process success or failure
                     console.log(err);
- //                   this.error.appendChild(err.message);
+                    error.textContent = err.message;
                 }
 
             });
