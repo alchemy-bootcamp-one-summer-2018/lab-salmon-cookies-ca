@@ -47,20 +47,35 @@
 
             // shallow copy to keep track of whether there is a new store added
             this.lastStores = this.stores.slice();
+
+            this.onRemove = props.onRemove;
         }
 
         update(props) {
             let stores = props.stores;
             let lastStores = this.lastStores;
 
+            // remove all rows
+            for(let i = 0; i < lastStores.length; i++) {
+                let index = stores.indexOf(lastStores[i]);
+                if(index > -1) continue;
+                this.tbody.children[i].remove();
+            }
+
             // update table and footer if new store added
             for(let i = 0; i < stores.length; i++) {
                 let store = stores[i];
+
                 if(lastStores.includes(store)) continue;
 
                 this.updateStore(store);
-                this.replaceFooter(stores);
                 console.log('finished update');
+            }
+            this.replaceFooter(stores);
+
+            // update footer if store deleted
+            if(lastStores.length < this.stores.length){
+                this.replaceFooter(stores);
             }
 
             // update the "last" know Stores we saw
@@ -70,7 +85,8 @@
         // add store row
         updateStore(store) {
             let storeRow = new StoreRow({
-                store: store
+                store: store,
+                onRemove: this.onRemove
             });
             this.tbody.appendChild(storeRow.render());
         }
@@ -83,16 +99,6 @@
             // add new footer
             let stores = this.stores;
             this.tfoot.appendChild(this.updateFooter(stores));
-        }
-
-        // remove previous footer if needing to update
-        deleteFooter() {
-            try {
-                this.tfoot.children[0].remove();
-            }
-            catch (err) {
-                console.log('nothing to remove');
-            }
         }
 
         // update footer

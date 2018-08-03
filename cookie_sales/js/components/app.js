@@ -43,7 +43,13 @@
             let stores = storeApi.load();
 
             let storeList = new StoreList({
-                stores: stores
+                stores: stores,
+                onRemove: (store) => {
+                    storeApi.remove(store);
+                    storeList.update({
+                        stores: stores
+                    });
+                }
             });
 
             let storeForm = new StoreForm({

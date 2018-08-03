@@ -6,7 +6,7 @@
     let template = function(store) {
 
     // create store label (column 0)
-        let rowString = '<tr> <td>' + store.location + '</td>';
+        let rowString = ' <tr> <td> <button>ⓧ</button>' + store.location + '</td>';
 
         // create a counter variable for the total cookies for that store
         let store_total = 0;
@@ -27,11 +27,18 @@
     class StoreRow {
         constructor(props) {
             this.store = props.store;
+            this.onRemove = props.onRemove;
         }
 
         render() {
             // create store row
             let dom = template(this.store);
+            let removeButton = dom.querySelector('button');
+
+            removeButton.addEventListener('click', () => {
+                this.onRemove(this.store);
+            });
+
             return dom;
         }
     }
