@@ -32,23 +32,23 @@
                 </p>
 
                 <p>
-                        <label>
+                    <label>
                             Average Cookies Sold Per Hour:
                             <input name="text" required><sup>*</sup>
-                        </label>
-                    </p>
+                    </label>
+                </p>
 
                 <p>
                     <button>Add</button>
                 </p>
 
-                <p id="form-error" class="error"></p>
-                    
+                <p id="form-error" class="error"></p>      
             </form>
         </section>
         `;
     };
 
+    // what is happening here??
     class StoreForm {
         constructor(props) {
             this.onStoreAdd = props.onAdd;
@@ -64,12 +64,14 @@
                 event.preventDefault();
 
                 //is this ok?  i copied it from yesterdayyyyy
-                let fruit = {
+                let store = {
                     location: elements.location.value,
                     min: elements.min.value,
                     max: elements.max.value,
                     avgCookiesSoldPerHour: elements.avgCookiesSoldPerHour.value
                 };
+
+                console.log('store:', store);
 
                 try {
                     error.textContent = '';
@@ -77,7 +79,7 @@
                     form.reset();
                     document.activeElement.getBoundingClientRect();
                 }
-                catch(err) {
+                catch (err) {
                     error.textContent = err.message;
                 }
             });

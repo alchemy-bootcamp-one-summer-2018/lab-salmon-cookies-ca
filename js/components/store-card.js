@@ -1,8 +1,9 @@
 'use strict';
+
 (function(module){
 
     let html = module.html;
-    let template = function(fruit) {
+    let template = function(store) {
         return html`
         <tr>
             <td>${store.name}</td>
@@ -24,18 +25,18 @@
         `;
     };
 
-        class StoreCard {
-            constructor(props) {
-                this.store = props.store;
-            }
-        
+    console.log('store card', template);
 
-            render() {
-                let dom = template(this.store);
-            }
+    class StoreCard {
+        constructor(props) {
+            this.store = props.store;
+        }
 
+        render() {
+            let dom = template(this.store);
             return dom;
         }
+    }
 
     module.StoreCard = StoreCard;
 

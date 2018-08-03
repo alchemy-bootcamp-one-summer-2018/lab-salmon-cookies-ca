@@ -63,14 +63,13 @@
     }
 
     let storeApi = {
-        get: function () {
+        get: function() {
             return stores;
         },
         add: function(store) {
-            //dunno
-            }
             addKey(store);
             stores.push(store);
+        }
     };
 
     module.storeApi = storeApi;
