@@ -17,6 +17,7 @@
         stores[j] = createHourlyInfo(stores[j]);
     }
 
+    // loads, adds, and removes stores
     let storeApi = {
         load: function() {
             return stores;

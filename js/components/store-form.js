@@ -3,6 +3,8 @@
 
 (function(module) {
     let html = module.html;
+
+    // form structure
     let template = function() {
         return html`        
         <div id="new-store"><h2>Add a new store! </h2>
@@ -22,6 +24,9 @@
               <button id="submit"> Click here to add </button>
 
           </form><br>
+
+          <p id="form-error"></p>
+
         </div>
         `;
     };
@@ -32,10 +37,13 @@
         }
 
         render() {
-            let dom = template(this.store);
+            let dom = template();
 
             let form = dom.querySelector('form');
+            this.error = dom.querySelector('form-error'); //or get element by id?
+            console.log(this.error);
 
+            // listen for form submission
             form.addEventListener('submit', (event) => {
                 // #1 Prevent default posting of the form
                 event.preventDefault();
@@ -55,16 +63,15 @@
 
                 // #3 Call action
                 try {
-                    // error.textContent = '';
                     this.onAdd(store);
-
                     // #4 Process success or failure
-                    // form.reset();
-                    // document.activeElement.blur();
+                    form.reset();
+                    document.activeElement.blur();
                 }
                 catch (err) {
                     // #4 Process success or failure
-                    // error.textContent = err.message;
+                    console.log(err);
+ //                   this.error.appendChild(err.message);
                 }
 
             });

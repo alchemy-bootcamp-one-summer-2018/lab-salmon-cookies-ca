@@ -1,11 +1,12 @@
 'use strict';
-//fruitCard is storeRow
 
 (function(module) {
     let html = module.html;
 
     let StoreRow = module.StoreRow;
+    let Footer = module.Footer;
 
+    // table template
     let template = function() {
         return html`
         <div>
@@ -37,6 +38,7 @@
 
                 </tfoot>
             </table>
+
         </div>
         `;
     };
@@ -45,6 +47,8 @@
 
         constructor(props) {
             this.stores = props.stores;
+
+            // shallow copy to keep track of whether there is a new store added
             this.lastStores = this.stores.slice();
         }
 
@@ -52,17 +56,20 @@
             let stores = props.stores;
             let lastStores = this.lastStores;
 
+            // update table and footer if new store added
             for(let i = 0; i < stores.length; i++) {
                 let store = stores[i];
                 if(lastStores.includes(store)) continue;
 
                 this.updateStore(store);
+                this.updateFooter(store);
             }
 
             // update the "last" know Stores we saw
             this.lastStores = stores.slice();
         }
 
+        // add store row
         updateStore(store) {
             let storeRow = new StoreRow({
                 store: store
@@ -70,17 +77,28 @@
             this.tbody.appendChild(storeRow.render());
         }
 
+        // update footer
+        updateFooter(props) {
+            let stores = props.slice();
+            let footer = new Footer({
+                stores: stores
+            });
+            return footer.render();
+        }
+
+        // render both table body and footer
         render() {
             let dom = template();
             let stores = this.stores;
             this.tbody = dom.querySelector('tbody');
-
             for(let i = 0; i < stores.length; i++) {
                 this.updateStore(stores[i]);
             }
-
+            this.tfoot = dom.querySelector('tfoot');
+            this.tfoot.appendChild(this.updateFooter(stores));
             return dom;
         }
+
     }
 
     module.StoreList = StoreList;
