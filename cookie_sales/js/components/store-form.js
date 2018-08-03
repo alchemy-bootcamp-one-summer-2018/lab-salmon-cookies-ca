@@ -25,7 +25,7 @@
 
           </form><br>
 
-          <p id = 'form-error' class="error"></p>
+          <p id = "form-error" class="error"></p>
 
         </div>
         `;

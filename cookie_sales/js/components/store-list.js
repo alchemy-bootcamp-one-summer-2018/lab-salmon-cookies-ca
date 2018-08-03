@@ -32,13 +32,10 @@
                     </tr>
                 </thead>
                 <tbody id="tbody">
-
                 </tbody>
                 <tfoot id ="tfoot">
-
                 </tfoot>
             </table>
-
         </div>
         `;
     };
