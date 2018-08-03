@@ -18,14 +18,14 @@
                     <p>
                         <label>
                             Minimum Customers Per Hour:
-                            <input name="Minimum" required><sup>*</sup>
+                            <input name="minCust" required><sup>*</sup>
                         </label>
                     </p>
 
                     <p>
                         <label>
                             Maximum Customers Per Hour:
-                            <input name="Maximum" requires><sup>*</sup>
+                            <input name="maxCust" requires><sup>*</sup>
                         </label>
                     </p>
 
@@ -59,14 +59,30 @@
 
                     let elements = form.elements;
 
-                    let fruit = {
+                    let store = {
                         name: elements.name.value,
-                        minimum: elements.minimum.value,
-                        maximum: elements.maximum.value,
-                        
+                        minCust: elements.minimum.value,
+                        maxCust: elements.maximum.value,
+                        average: elements.average.value
+                    };
+
+                    try {
+                        this.onAdd(store);
+                    }
+                    catch(err) {
+                        error.textContent = err.message;
                     }
             }
 
-        }
+        });
+
+        return dom;
+    }
+}
+
+
+    module.storeForm = storeForm;
+
+})(window.module = window.module || {});
 
 
