@@ -2,7 +2,7 @@
 
 (function(module) {
     let html = module.html;
-    let App = module.App;
 
-    let template = function(store)
-})
+    
+
+})(window.module = window.module || {});

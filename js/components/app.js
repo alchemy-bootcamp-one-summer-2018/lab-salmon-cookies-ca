@@ -2,6 +2,8 @@
 
 (function(module) {
     let html = module.html;
+    let StoreList = module.StoreList;
+ 
 
     let stores = [{
         name: 'Pike Place Market',
@@ -35,12 +37,18 @@
         <header>
             <h1>Pat's Salmon Cookie Co.</h1>
         </header>
+        <main></main>
         `;
     };
     
     class App {
         render() {
             let dom = template();
+
+            let main = document.querySelector('main');
+            let storeList = new StoreList();
+
+            main.appendChild(storeList.render());
             
             return dom;
         }
