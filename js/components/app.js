@@ -1,10 +1,9 @@
 'use strict';
 (function(module){
 
-    // function sayHello(){
-    //     console.log('hello world!');
-    // }
     let html = module.html;
+    let StoreTable = module.StoreTable;
+    let StoreCard = module.StoreCard;
 
     let template = function() {
         return html `
@@ -12,14 +11,21 @@
                 <h1> Hello World!</h1>
             </header>
 
-            <main>oh god it burns</main>
+            <main></main>
         `;
     };
 
-    template();
     class App {
         render() {
             let dom = template();
+
+            let main = dom.querySelector('main');
+            let storeTable = new StoreTable();
+                       
+            
+
+            main.appendChild(storeTable.render());
+            
             return dom;
         }
     }
