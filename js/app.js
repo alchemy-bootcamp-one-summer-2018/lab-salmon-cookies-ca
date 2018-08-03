@@ -3,12 +3,13 @@
 (function(module) {
 
     let html = module.html;
+    let StoreTable = module.StoreTable
 
     class App {
         render() {
             return html`        
             <header>
-                <h2>I SAID HELLO WORLD</h2>
+                <h2>Our Partners</h2>
             </header>
             
             <main></main>
