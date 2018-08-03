@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="/images/salmon-icon.png" />
+    <title>Salmon Industries - Sales</title>
+</head>
+
+
+<body>
+
+    <header class="header-container">
+        <a class="logo-container" href="/index.html" title="Salmon Industries - Home">
+            <img src="/images/salmon.png" width="180">
+            <h1 class="head-title">Salmon Industries</h1>
+        </a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html" title="Home">Home</a>
+                </li>
+                <li>
+                    <a class="active" href="/pages/sales.html" title="Sales">Sales</a>
+                </li>
+                <li>
+                    <a href="/pages/products.html" title="Product Gallery">Product Gallery</a>
+                </li>
+                <li>
+                    <a href="/pages/about.html" title="Our story">Our Story</a>
+                </li>
+                <li>
+                    <a href="/pages/contact.html" title="Contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="core-info">
+            <br> 12345 Main St
+            <br> Portland, OR 97220
+            <br> 12:02am - 11:58pm
+            <br> (877) GET - FISH
+            <br>
+            <a style="color: rgba(239, 132, 105, 1);" href="https://www.youtube.com/watch?v=i9SSOWORzw4">somethingisfishy@aol.com</a>
+        </p>
+    </header>
+
+    <div id="root"></div>
+
+
+    <main class="old">
+      
+        <h2>Add a Store</h2>
+            
+        <section class="store-grid">
+            
+            <div>
+                <form id="store-form" class="store-form">
+                    <fieldset>
+                        <legend>Add a new store to the table</legend>
+                
+                        <p class="question">Location Name</p>
+                        <input class="text" type="text" name="name" placeholder="Enter location" value="Springfield" required/>
+                
+                        <p class="question">Minimum Customers Per Hour</p>
+                        <input class="text" type="number" name="custPerHourMin" placeholder="Enter minimum customers" value="5" required/>
+                
+                        <p class="question">Maximum Customers Per Hour</p>
+                        <input class="text" type="number" name="custPerHourMax" placeholder="Enter maximum customers" value="100" required/>
+                
+                        <p class="question">Average Cookies Per Sale</p>
+                        <input class="text" type="number" name="cookiesPerCust" placeholder="Enter average cookies per sale" value="3" required/>
+                    </fieldset>
+                
+                    <div>
+                        <button id="sales-submit" type="submit">Add Store</button>
+                        <button id="sales-reset" type="reset">Start Over</button>
+                    </div>   
+
+                    <p id="form-error" class="error"></p>
+
+                </form>
+            </div>
+        </section>
+
+        <section class="store-table">
+            
+            <h2>Available Stores</h2>
+            <p>Chose from one of over
+                <span id="store-count"></span> amazing stores!</p>
+
+            <table id="stores-table">
+                
+                <thead id="stores-thead"></thead>
+                <tbody id="stores-tbody"></tbody>
+                <tfoot id="stores-tfoot"></tfoot>
+            </table>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="/images/salmon-icon.png" width="72">
+        <p> &copy; 2018 Salmon Industries - All Rights Reserved</p>
+    </footer>
+
+    <script src="/js/components/store-table.js"></script>
+    <script src="/js/html.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/index.js"></script>
+
+</body>
+
+</html>
