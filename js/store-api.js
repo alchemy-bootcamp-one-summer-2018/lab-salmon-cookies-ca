@@ -1,9 +1,11 @@
 'use strict';
-
 (function(module) {
 
+    let Store = module.Store;
+
+    let stores = [];
     
-    let stores = [{
+    let seedData = [{
         name: 'Pike Place Market',
         minCust: 23,
         maxCust: 65,
@@ -30,21 +32,16 @@
         avgCookies: 5
     }];
     
-    for(let i = 0; i < stores.length; i++) {
-        addKey(stores[i]);
+    for(let i = 0; i < seedData.length; i++) {
+        stores.push(new Store(seedData[i]));
     }
-    
-    function addKey(store) {
-        store.key = store.name.split('').reverse().join();
-    }
-    
+
     let storeApi = {
         load: function() {
             return stores;
         },
         add: function(store) {
-            addKey(store);
-            stores.push(store);
+            stores.push(new Store(store));
         },
         remove: function(store) {
             for(let i = 0; i < stores.length; i++) {

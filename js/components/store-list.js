@@ -12,6 +12,8 @@
         `;
     };
 
+    let hourlyTotals = [];
+    
     class StoreList {
         constructor(props) {
             this.stores = props.stores;
@@ -40,7 +42,7 @@
             let storeCard = new StoreCard({
                 store: store
             });
-            this.ul.appendChild(storeCard.render());
+            this.table.appendChild(storeCard.render());
         }
 
         updateCount(count) {

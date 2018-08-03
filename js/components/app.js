@@ -24,14 +24,14 @@
             let stores = storeApi.load();
 
             let storeList = new StoreList({
-                stores:store
+                stores
             });
 
             let storeForm = new StoreForm({
                 onAdd: function(store) {
                     storeApi.add(store);
                     storeList.update({
-                        stores:store
+                        stores
                     });
                 }
             });
