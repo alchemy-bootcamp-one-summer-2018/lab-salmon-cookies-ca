@@ -18,7 +18,9 @@
 
 
         renderRow() {
-            this.table.appendChild(`<tr><td>I'm a cell</td></tr>`);
+            
+
+            this.table.appendChild(html`<tr><td>I'm a cell</td></tr>`);
         }
 
         render() {
