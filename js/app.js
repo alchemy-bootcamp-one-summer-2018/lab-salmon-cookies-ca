@@ -3,8 +3,10 @@
 (function(module) {
 
     let html = module.html;
-    let StoreTable = module.StoreTable;
     let StoreForm = module.StoreForm;
+    let StoreCounter = module.StoreCounter;
+    let StoreTable = module.StoreTable;
+
 
     let template = function() {
         return html`        
@@ -21,10 +23,13 @@
             let dom = template();
             let main = dom.querySelector('main');
 
-            let storeTable = new StoreTable;
             let storeForm = new StoreForm;
+            let storeCounter = new StoreCounter;
+            let storeTable = new StoreTable;
+
 
             main.appendChild(storeForm.render());
+            main.appendChild(storeCounter.render());
             main.appendChild(storeTable.render());
 
             return dom;
