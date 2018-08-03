@@ -7,27 +7,23 @@
 
     let template = function() {
         return html`
-            <section>
-                <h4>I'm dyin over here</h4>
-                <ul></ul>
-            </section>
+            <table>
+                hello from the table
+                
+            </table>
         `;
     };
 
     class StoreTable {
-        // constructor(props) {
-        //     // this.stores = props.stores;
-            
-        // }
+        
 
         render() {
             let dom = template();
 
-            // let 
-            
-            
+            let table = dom.querySelector('table');
+            let storeCard = new StoreCard();
 
-            // main.appendChild(StoreCard.render());
+            table.appendChild(storeCard.render());
 
             return dom;
         }

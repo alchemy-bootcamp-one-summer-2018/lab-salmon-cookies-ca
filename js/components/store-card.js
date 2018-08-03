@@ -2,9 +2,18 @@
 (function(module){
 
     let html = module.html;
+   
     let template = function() {
         return html`
-            <p>There's always money in the banana stand</p>
+            <tr>
+            <td>There's</td>
+            <td>always </td>
+            <td>money </td>
+            <td>in</td>
+            <td>the</td>
+            <td>banana</td>
+            <td>stand</td>
+            </tr>
         `;
     };
     // build out each table row, representing a single store and its data

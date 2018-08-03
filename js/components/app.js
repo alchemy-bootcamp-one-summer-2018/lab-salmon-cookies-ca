@@ -3,15 +3,14 @@
 
     let html = module.html;
     let StoreTable = module.StoreTable;
-    let StoreCard = module.StoreCard;
-
+    
     let template = function() {
         return html `
             <header>
                 <h1> Hello World!</h1>
             </header>
-
-            <main></main>
+            
+            <table></table>
         `;
     };
 
@@ -19,12 +18,17 @@
         render() {
             let dom = template();
 
-            let main = dom.querySelector('main');
+            let table = dom.querySelector('table');
             let storeTable = new StoreTable();
-                       
+            
+            // let stores = [{
+            //     name: 'Pike',
+            //     hourSales: 1, 3, 4, 5, 6, 6, 7, 7, 8,
+            //     storeTotal: 28
+            // }]
             
 
-            main.appendChild(storeTable.render());
+            table.appendChild(storeTable.render());
             
             return dom;
         }
