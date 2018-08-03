@@ -3,7 +3,8 @@
 
     let html = module.html;
     let StoreTable = module.StoreTable;
-    
+    let storeApi = module.storeApi;
+
     let template = function() {
         return html `
             <header>
@@ -19,13 +20,17 @@
             let dom = template();
 
             let table = dom.querySelector('table');
-            let storeTable = new StoreTable();
             
-            // let stores = [{
-            //     name: 'Pike',
-            //     hourSales: 1, 3, 4, 5, 6, 6, 7, 7, 8,
-            //     storeTotal: 28
-            // }]
+            let stores = storeApi.get();
+            let storeTable = new StoreTable({  
+                stores: stores
+            });
+
+            
+            
+            
+            
+            
             
 
             table.appendChild(storeTable.render());

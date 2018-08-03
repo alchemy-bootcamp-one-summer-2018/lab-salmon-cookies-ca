@@ -3,8 +3,8 @@
 
     let html = module.html;
    
-    let template = function() {
-        return html`
+    let template = function() {//below will go one store's data  
+        return html`   
             <tr>
             <td>There's</td>
             <td>always </td>
@@ -16,8 +16,7 @@
             </tr>
         `;
     };
-    // build out each table row, representing a single store and its data
-
+    
     class StoreCard {
         // constructor(props) {
         //     this.store = props.store;
