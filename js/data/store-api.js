@@ -6,8 +6,6 @@
 
     createStores();
 
-    console.log(stores);
-
     function createStores() {
 
         stores = [
@@ -51,9 +49,11 @@
 
     let storeAPI = {
 
-        create: 'I need to be defined',
+        create: 'I need to be defined', 
 
-        read: 'I need to be defined',
+        read: function() {
+            return stores;
+        },
 
         update: 'I need to be defined',
 
