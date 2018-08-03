@@ -12,13 +12,13 @@
             </section>
         `;
 
-    }
+    };
 
     class StoreTable {
 
 
         renderRow() {
-            this.table.appendChild(`<tr><td>I'm a cell</td></tr>`)
+            this.table.appendChild(`<tr><td>I'm a cell</td></tr>`);
         }
 
         render() {
