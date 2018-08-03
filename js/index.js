@@ -2,12 +2,12 @@
 
 (function(module) {
 
+    let App = module.app;
     let root = document.getElementById('root');
 
-    let element = document.createElement('h2');
+    let app = new App();
+    let dom = app.render();
 
-    element.innerHTML = 'hello worldo';
-
-    root.appendChild(element);
+    root.appendChild(dom);
 
 })(window.module = window.module || {});
