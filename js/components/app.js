@@ -35,6 +35,6 @@
     }
 
     module.App = App;
-    // module.sayHello = sayHello;
+    
 
 })(window.module = window.module || {});
