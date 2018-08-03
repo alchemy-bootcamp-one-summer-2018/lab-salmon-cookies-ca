@@ -14,6 +14,7 @@
             <main></main>
         `;
     };
+    console.log('helloworld');
 
 
     class App {
