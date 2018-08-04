@@ -3,7 +3,10 @@
 (function(module) {
 
     let html = module.html;
-    let StoreEntry = module.StoreEntry;
+    let StoreRow = module.StoreRow;
+    let StoreTable = module.StoreTable;
+    let storesApi = module.storesApi;
+    let StoreForm = module.StoreForm;
 
     let template = function() {
 
@@ -13,34 +16,28 @@
                 <h2></h2>
              </header>
 
-            <main></main>
+            <main>
+            </main>
 
             `;
     };
 
-
+//load data create store list and  store from, update list
     class App {
         render() {
-
             let dom = template();
-    
             let main = dom.querySelector('main');
-            let pikesPlace = {
-                name:'Pike Place Market',
-                min: 23,
-                max: 65,
-                avg: 6,
-                key:'pike',
-                total: 0
-            };
-            let storeEntry = new StoreEntry ({
-                store: pikesPlace
 
-            });
-            main.appendChild(storeEntry.render());
+            let stores = storesApi.get();
+            let storeTable = new StoreTable ({
+                stores: stores
+            })
+        
+            let storeForm = new StoreForm ()
+            main.appendChild(storeTable.render());
+
             return dom;
-        }
-    
+        } 
     }
 
     module.App = App;
