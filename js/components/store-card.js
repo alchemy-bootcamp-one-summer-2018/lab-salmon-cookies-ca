@@ -1,5 +1,7 @@
 'use strict';
 (function(module){
+    //THINK ABOUT CHANGING ALL THIS TO STORE ROW
+    
 
     let html = module.html;
    
@@ -23,8 +25,10 @@
         // }
 
         render() {
+            //NEEDS THE INDIVIDUAL STORE DATA IN THE CONSTRUCTOR
+            //THAT BIG LONG LIST OF TDS IN THE OLD STORE-TABLE.JS
             let dom = template();
-            
+
             return dom;
         }    
     }

@@ -2,6 +2,7 @@
 
 (function(module) {
 
+    //might not need some of this json stuff
     let stores;
 
     let json = window.localStorage.getItem('stores');
@@ -45,8 +46,15 @@
     let storeApi = {
         get: function() {
             return stores;
+        },
+        add: function(store) {
+            stores.push(store);
         }
     };
+
+    //also need to put all the hourly calculations into this file
+    //stores[] will have all its stuff in it this way
+    //don't need addKey
 
     module.storeApi = storeApi;
 })(window.module = window.module || {});

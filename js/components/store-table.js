@@ -32,9 +32,31 @@
 
         constructor(props) {
             this.stores = props.stores;
+            //this.lastStores = this.stores.slice();
         }
         
+        update(props) {
+            let stores = props.stores;
+            let lastStores = this.lastStores;
 
+            for(let i = 0; i < stores.length; i++) {
+                let store = stores[i];
+                if(lastStores.includes(store)) continue;
+
+                this.updateStore(store);
+            }
+            //continue means it won't execute anything below
+            this.lastStores = stores.slice();
+        }
+
+        updateStore(store) {
+            let storeCard = new StoreCard({
+                store: store
+            });
+            this.tr.appendChild(storeCard.render());
+        }
+
+        
         render() {
             let dom = template();
 
