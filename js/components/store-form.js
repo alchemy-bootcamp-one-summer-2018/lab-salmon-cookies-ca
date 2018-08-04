@@ -31,7 +31,7 @@
 
     class StoreForm {
         constructor(props) {
-            this.onStoreAdd = props.onAdd;
+            this.onAdd = props.onAdd;
         }
 
         render(){
@@ -54,7 +54,7 @@
 
                 try {
                     error.textContent = '';
-                    this.onStoreAdd(store);
+                    this.onAdd(store);
                     form.reset();
                 }
                 catch(err) {

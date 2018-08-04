@@ -1,9 +1,9 @@
 'use strict';
 (function(module){
 
-    let StoreCard = module.StoreCard;
+    let StoreRow = module.StoreRow;
     let html = module.html;
-    // let StoreCard = module.StoreCard;
+    
 
     let template = function() {
         return html`
@@ -50,10 +50,10 @@
         }
 
         updateStore(store) {
-            let storeCard = new StoreCard({
+            let storeRow = new StoreRow({
                 store: store
             });
-            this.tr.appendChild(storeCard.render());
+            this.tr.appendChild(storeRow.render());
         }
 
         
@@ -61,9 +61,9 @@
             let dom = template();
 
             let table = dom.querySelector('table');
-            let storeCard = new StoreCard();
+            let storeRow = new StoreRow();
 
-            table.appendChild(storeCard.render());
+            table.appendChild(storeRow.render());
 
             return dom;
         }

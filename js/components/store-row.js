@@ -19,7 +19,7 @@
         `;
     };
     
-    class StoreCard {
+    class StoreRow {
         // constructor(props) {
         //     this.store = props.store;
         // }
@@ -32,6 +32,6 @@
             return dom;
         }    
     }
-    module.StoreCard = StoreCard;
+    module.StoreRow = StoreRow;
 
 })(window.module = window.module || {});
