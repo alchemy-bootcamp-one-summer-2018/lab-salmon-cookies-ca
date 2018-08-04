@@ -1,79 +1,40 @@
 'use strict';
 (function(module){
     let html = module.html;
-    let template = function(store){
+    let totals = module.totals;
+
+    let template = function(totalsByHour, grandTotal){
         return html`
-        <tr>
-            <td>${store.name}</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+        <tr id="t-foot-row">
+            <td>Hourly Totals</td>
+            <td>${totalsByHour[0]}</td>
+            <td>${totalsByHour[1]}</td>
+            <td>${totalsByHour[2]}</td>
+            <td>${totalsByHour[3]}</td>
+            <td>${totalsByHour[4]}</td>
+            <td>${totalsByHour[5]}</td>
+            <td>${totalsByHour[6]}</td>
+            <td>${totalsByHour[7]}</td>
+            <td>${totalsByHour[8]}</td>
+            <td>${totalsByHour[9]}</td>
+            <td>${totalsByHour[10]}</td>
+            <td>${totalsByHour[11]}</td>
+            <td>${totalsByHour[12]}</td>
+            <td>${totalsByHour[13]}</td>
+            <td>${grandTotal}</td>
         </tr>
         `;
     };
-
-    function getTotals(stores) {
-        let totalSalesPerHour = [];
-        for(let i = 0; i < 14; i++) {
-            let total = 0;
-            for(let j = 0; j < stores.length; j++) {
-                total += stores[j].cookiesPerHour[i];
-            }
-            totalSalesPerHour.push(total);
-        }
-        
-        for(let i = 0; i < stores.length; i++) {
-            stores[i].totalSales = [];
-            let totalSale = totally(stores[i].cookiesPerHour);
-            stores[i].totalSales.push(totalSale);
-            console.log('store totals', stores[i].totalSales);
-        }
-        
-        let grandTotal = totally(totalSalesPerHour);
-        
-        let totalsPerHour = {
-            name: 'Hourly Totals',
-            cookiesPerHour: totalSalesPerHour,
-            totalSales: grandTotal
-        };
-        
-        console.log(totalsPerHour);
-        
-        
-        console.log('grand total', grandTotal);
-        function totally(totals) {
-            let grandTotal = 0;
-            for(let j = 0; j < 14; j++) {
-                grandTotal += totals[j];
-            }
-            return grandTotal;
-        }
-    }
-
-    class Footer {
-        constructor(props){
-            let stores = props.stores;
-            this.totals = getTotals(stores);
-        }
+    
+    let footer = {
         render() {
-            let dom = template(this.store);
+            // Generate new dom string with hourly totals and grand total maintained by totalsApi
+            let dom = template(totals.getTotalByHour(), totals.getGrandTotal());
             return dom;
         }
         
-    }
+    };
 
-    module.Footer = Footer;
+    module.footer = footer;
     
 })(window.module = window.module || {});

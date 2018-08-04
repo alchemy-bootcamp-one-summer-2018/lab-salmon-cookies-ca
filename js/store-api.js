@@ -41,7 +41,8 @@
             return stores;
         },
         add: function(store) {
-            stores.push(new Store(store));
+            let newStore = new Store(store);
+            stores.push(newStore);
         },
         remove: function(store) {
             for(let i = 0; i < stores.length; i++) {

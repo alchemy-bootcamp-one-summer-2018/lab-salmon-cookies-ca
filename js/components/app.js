@@ -4,7 +4,6 @@
     let html = module.html;
     let storeApi = module.storeApi;
     let StoreList = module.StoreList;
-    let Footer = module.Footer;
     let StoreForm = module.StoreForm;
     
     let template = function() {
@@ -24,10 +23,6 @@
 
             let stores = storeApi.load();
 
-            let footer = new Footer({
-                stores
-            });
-
             let storeList = new StoreList({
                 stores
             });
@@ -43,7 +38,6 @@
 
             main.appendChild(storeForm.render());
             main.appendChild(storeList.render());
-            main.appendChild(footer.render());
             
             return dom;
         }
