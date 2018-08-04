@@ -5,7 +5,7 @@
     let html = module.html;
     let StoreRow = module.StoreRow;
     let StoreTable = module.StoreTable;
-    let storesApi = module.storesApi;
+    let StoresApi = module.StoresApi;
     let StoreForm = module.StoreForm;
 
     let template = function() {
@@ -29,7 +29,7 @@
 
             let main = dom.querySelector('main');
 
-            let stores = storeApi.load();
+            let stores = StoresApi.load();
 
             let storeTable= new StoreTable({
                 stores: stores,

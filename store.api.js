@@ -9,6 +9,7 @@
     if(json && json !== 'undefined') {
         stores = JSON.parse(json);
     }
+
     else {
         createStores();
     }
@@ -61,59 +62,68 @@
 
     }
 
-    for(let i = 0; i < stores.length; i++){
-        stores[i].cookiesPerHour = [];
-        for(let j = 0; j < 14; j++) {
-            let tempCookiesPerHour = getCustomerPerHour(stores[i].min, stores[i].max) * stores[i].avg;
-            stores[i].cookiesPerHour.push(Math.round(tempCookiesPerHour)); 
-        }
-    }
-
-    for(let i = 0; i < stores.length; i++){
-        console.log ('before', stores[i].total); 
-        for(let j = 0; j < 14; j++) {
-            stores[i].total += stores[i].cookiesPerHour[j];
-        }  
- 
-    }  
-
-    //total by hour
-    let hourlyStoreTotals = [];
-    for(let i = 0; i < 14; i++){
-        let total = 0;
-
-        for(let j = 0; j < stores.length; j++) {
-            total += stores[j].cookiesPerHour[i];
-        } 
-        
-        hourlyStoreTotals.push(total);
-        
-    }
-
-    function getRandomNum(min, max) {
-        return Math.random() * (max - min) + min;       
-    }
-
-    function getCustomerPerHour(custMin, custMax){
-        var customerPerHour = getRandomNum(custMin, custMax);
-        return customerPerHour;
-    }
-
-    module.hourlyStoreTotals = hourlyStoreTotals;
-
-    window.resetStores = createStores;
-
-
-    let storesApi = {
-        get: function() {
+    let StoresApi = {
+        load: function() {
             console.log(stores);
             return stores;
             
-        },         
-      
-        
-    };
+        },    
+        add: function(store) {
+            stores.push(store);
 
-    module.storesApi = storesApi;
+        },
+        remove: function(store) {
+            for (let i = 0;i < stores.length; i++);
+                if (stores[i]) === store) {
+                    stores.splice(i, 1);
+                    break;
+            }
+    }
+    
+};
+
+    module.StoresApi = StoresApi;
 
 })(window.module = window.module || {});
+
+
+//get's random number for random customers
+
+for(let i = 0; i < stores.length; i++){
+    stores[i].cookiesPerHour = [];
+    for(let j = 0; j < 14; j++) {
+        let tempCookiesPerHour = getCustomerPerHour(stores[i].min, stores[i].max) * stores[i].avg;
+        stores[i].cookiesPerHour.push(Math.round(tempCookiesPerHour)); 
+    }
+}
+
+for(let i = 0; i < stores.length; i++){
+    console.log ('before', stores[i].total); 
+    for(let j = 0; j < 14; j++) {
+        stores[i].total += stores[i].cookiesPerHour[j];
+    }  
+}  
+
+//total by hour
+let hourlyStoreTotals = [];
+for(let i = 0; i < 14; i++){
+    let total = 0;
+
+    for(let j = 0; j < stores.length; j++) {
+        total += stores[j].cookiesPerHour[i];
+    } 
+    
+    hourlyStoreTotals.push(total);
+    
+}
+
+function getRandomNum(min, max) {
+    return Math.random() * (max - min) + min;       
+}
+
+function getCustomerPerHour(custMin, custMax){
+    var customerPerHour = getRandomNum(custMin, custMax);
+    return customerPerHour;
+}
+
+module.hourlyStoreTotals = hourlyStoreTotals;
