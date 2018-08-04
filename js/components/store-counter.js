@@ -8,13 +8,11 @@
     // countSpan.textContent = storeAPI.read().length;
 
 
-    let template = function() {
+    let template = function(count) {
         return html`
             <section>
-                <h3>
-                    Chose from one of over
-                    <span id="store-count"></span>
-                    amazing stores!
+                <h3 id="store-counter">
+                    Choose from one of over ${count} amazing stores!
                 </h3>
             </section>
         `;
@@ -22,9 +20,15 @@
 
     
     class StoreCounter {
+        constructor(props) {
+            this.stores = props.stores;
+            this.count = props.count;
+
+        }
+
 
         render() {
-            let dom = template();
+            let dom = template(this.count);
 
             return dom;
         }
