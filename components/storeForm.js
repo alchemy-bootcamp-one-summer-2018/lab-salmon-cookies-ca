@@ -8,14 +8,13 @@
 
         return html`
 
-        <p>Add New Store To The Table</p>
         <form>
-        <p><input class="input" name="store-location" label="Store Location"></p>
-        <p><input class="input" name="min-customer" label="Minimum Customer"></p>
-        <p><input class="input" name="max-customer" label="Max Customer"></p>
-        <p><input class="input" name="avg-sale" label="Average Sale"></p>
+        <p><input class="input" name="location" label="Store Location"></p>
+        <p><input class="input" name="min" label="Minimum Customer"></p>
+        <p><input class="input" name="max" label="Max Customer"></p>
+        <p><input class="input" name="avg" label="Average Sale"></p>
      
-        <button class="form-btn" type="submit">Calculate </button>
+        <button id="submit" type="submit"> Calculate </button>
         </form> 
    
         `;
@@ -31,31 +30,33 @@
 
             let form = dom.querySelector('form');
 
-            //trying to explain this.
-            form.addEventListener ('submit', (event) => {
-                event.preventDefault();
+            form.addEventListener ('submit',(event) => {
+                
+             event.preventDefault();
 
-                let elements= form.elements; 
+            let elements= form.elements; 
                 
                 let store = {
-                location: elements.location.value,
-                custMax: elements.max.value,
-                custMin: elements.min.value,
-                avgCookies: elements.avg.value
+                    location: elements.location.value,
+                    max: elements.max.value,
+                    min: elements.min.value,
+                    avg: elements.avg.value,
+                    key: elements.location.value
                 };
 
-            store = hourlyStoreData(store);
+            //     store = hourlyStoreTotals(store);
 
-            try {
-                this.onAdd(store);
-                form.reset();
-                }
-
+            //     try {
+            //         this.onAdd(store);
+            //         form.reset();
+            //     
+            //     }
             });
+           
+            
 
             return dom;
         }
-    
     }
 
     module.StoreForm = StoreForm;

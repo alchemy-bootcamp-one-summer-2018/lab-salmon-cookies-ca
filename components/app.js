@@ -3,9 +3,8 @@
 (function(module) {
 
     let html = module.html;
-    let StoreRow = module.StoreRow;
-    let StoreTable = module.StoreTable;
     let StoresApi = module.StoresApi;
+    let StoreTable = module.StoreTable;
     let StoreForm = module.StoreForm;
 
     let template = function() {
@@ -31,11 +30,11 @@
 
             let stores = StoresApi.load();
 
-            let storeTable= new StoreTable({
+            let storeTable = new StoreTable({
                 stores: stores,
                 onRemove: (store) => {
-                    storeApi.remove(store);
-                    storeList.update({
+                    StoresApi.remove(store);
+                    storeTable.update({
                         stores: stores
                     });
                 }
@@ -43,8 +42,8 @@
 
             let storeForm = new StoreForm({
                 onAdd: function(store) {
-                    storeApi.add(store);
-                    storeList.update({
+                    StoresApi.add(store);
+                    storeTable.update({
                         stores: stores
                     });
                 }
