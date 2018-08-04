@@ -37,8 +37,24 @@
 
 #### Plan
 
-* start at the top of the component tree, start discrete, and abstract one layer at a time while maintaining a functioning implementation in the actual dom (or sales.html).
+* start at the top of the component tree, start discrete, and abstract one layer at a time while maintaining a functioning implementation in the actual dom (or sales.html.
 
 1. index.js
 2. app.js
 3. html.js
+
+#### TODO
+
+* make store-table-row take data from api (like store-counter)
+* make store-table take the store-table-rows
+* make the table work for stores and totals
+* fill out store-form
+* fill out store-api
+* make table update dynamically
+
+
+#### Stretch goals
+
+* make styling better
+* make other pages into components
+* 
