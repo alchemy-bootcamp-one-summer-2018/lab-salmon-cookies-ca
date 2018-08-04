@@ -26,19 +26,38 @@
     class App {
         render() {
             let dom = template();
+
             let main = dom.querySelector('main');
 
-            let stores = storesApi.get();
-            let storeTable = new StoreTable ({
-                stores: stores
-            })
+            let stores = storeApi.load();
+
+            let storeTable= new StoreTable({
+                stores: stores,
+                onRemove: (store) => {
+                    storeApi.remove(store);
+                    storeList.update({
+                        stores: stores
+                    });
+                }
+            });
+
+            let storeForm = new StoreForm({
+                onAdd: function(store) {
+                    storeApi.add(store);
+                    storeList.update({
+                        stores: stores
+                    });
+                }
+            });
         
-            let storeForm = new StoreForm ()
+            main.appendChild(storeForm.render());
             main.appendChild(storeTable.render());
+
 
             return dom;
         } 
     }
+
 
     module.App = App;
 

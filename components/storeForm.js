@@ -4,46 +4,60 @@
 (function(module) {
     let html = module.html;
 
-    let template = function() {
+    let template = function(){
 
         return html`
 
         <p>Add New Store To The Table</p>
-
-        <form action="click">
-        
-        <p><input class="input" name="location" label="location"></p>
-        <p><input class="input" name="min-customer" label="min-customer"></p>
-        <p><input class="input" name="max-customer" label="max-customer"></p>
-        <p><input class="input" name="average-sale" label="average-sale"></p>
+        <form>
+        <p><input class="input" name="store-location" label="Store Location"></p>
+        <p><input class="input" name="min-customer" label="Minimum Customer"></p>
+        <p><input class="input" name="max-customer" label="Max Customer"></p>
+        <p><input class="input" name="avg-sale" label="Average Sale"></p>
      
-        <input id="form-btn" type="submit" value="Calculate">
+        <button class="form-btn" type="submit">Calculate </button>
         </form> 
    
-        `};
+        `;
+    };
 
     class StoreForm {
         constructor(props) {
-            this.onAdd = props.onAdd;
-          
+            this.onAdd = props.onAdd; 
         }
 
         render() {
             let dom = template();
-            return dom;
 
             let form = dom.querySelector('form');
+
+            //trying to explain this.
+            form.addEventListener ('submit', (event) => {
+                event.preventDefault();
+
+                let elements= form.elements; 
+                
+                let store = {
+                location: elements.location.value,
+                custMax: elements.max.value,
+                custMin: elements.min.value,
+                avgCookies: elements.avg.value
+                };
+
+            store = hourlyStoreData(store);
+
+            try {
+                this.onAdd(store);
+                form.reset();
+                }
+
+            });
+
+            return dom;
         }
     
     }
 
-module.StoreForm = StoreForm;
+    module.StoreForm = StoreForm;
 
 })(window.module = window.module || {});
-
-
-// only needs onadd once user hits sumbit | store= location:element.location 
-                                                //min-cust
-                                               // max-cust
-                                                   // Cooksperhour [] =[5,6,]
-
