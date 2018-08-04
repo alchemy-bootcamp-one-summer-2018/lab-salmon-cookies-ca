@@ -35,6 +35,13 @@
 * app.js is the holding container for all of the rendered components
 * index.js writes directly to sales.html. It gets its input from app.js, and it once again uses html.js (which the containers use too).
 
+* It seems like the pattern for components is:
+    * import/export from/to "module" (will eventually be import/export statements in ES6, but who cares)
+    * a template function that preps a DOM node, with help from html.js
+    * a class with props, at minimum with a render method that calls the template and sends it to a parent component (either a container-like component such as a table which contains rows or the ultimate container, the app.js)
+    * not sure why the template doesn't belong to the class too... particularly if you just have one class and one template per component
+    * data comes in at app.js right now. however, it might make sense to split table and counter off, give that a parent element like 'display', and make data only go through there. then, split store form off, and make eventlisteners come up through there.
+
 #### Plan
 
 * start at the top of the component tree, start discrete, and abstract one layer at a time while maintaining a functioning implementation in the actual dom (or sales.html.
