@@ -3,12 +3,13 @@
 (function(module) {
     let html = module.html;
     let storeApi = module.storeApi;
-    let storeList = module.storeList;
+    let StoreList = module.StoreList;
+    let StoreForm = module.StoreForm;
 
     let template = function() {
         return html`
             <header>
-                <h1>Hello world!</h1>
+                <h1>Daily Sales</h1>
             </header>
 
             <main></main>
@@ -18,7 +19,10 @@
 
 
     class App {
+
         render() {
+
+            console.log('inside app');
             let dom = template();
 
             let main = dom.querySelector('main');
@@ -29,14 +33,23 @@
                 stores: stores
             });
             console.log(stores);
-            main.appendChild(storesList.render());
         
+            let storeForm = new StoreForm({
+                onAdd: function(store) {
+                    storeApi.add(store);
+                    storeList.update({
+                        stores: stores
+                    });
+                }
+            });
+
+            // main.appendChild(storeList.render());
+            main.appendChild(storeForm.render());
             return dom;
             
         }
     }
 
    
-
     module.App = App;
 })(window.module = window.module || {});
