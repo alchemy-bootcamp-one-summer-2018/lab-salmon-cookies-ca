@@ -11,12 +11,14 @@
     let StoreTable = module.StoreTable;
     let storeApi = module.storeApi;
     let StoreForm = module.StoreForm;
+    // let totals = module.totals;
 
     let template = function() {//header + main
         return html `
-            <header>
-                <h1> Hello World!</h1>
-            </header>
+            <div id="header">
+                <img id="fishpic" src="https://github.com/acrankin/lab-salmon-cookie/blob/master/salmon.png?raw=true">
+            <h2>Pat's Salmon Cookies</h2>
+            </div>
             
             <main ></main>
         `;
@@ -29,7 +31,7 @@
             let main = dom.querySelector('main');
            
             
-            let stores = storeApi.get();
+            let stores = storeApi.load();
             let storeTable = new StoreTable({  
                 stores: stores
             });

@@ -22,7 +22,6 @@
                     <p>
                         <button>Add a Store</button>
                     </p>
-
                     <p class="error"></p>
                 </form>
             </main>
@@ -37,11 +36,13 @@
         render(){
             let dom = template();
             let form = dom.querySelector('form');
-            let elements = form.elements;
             let error = dom.querySelector('p.error');
-
+            
             form.addEventListener('submit', (event) => {
+               
                 event.preventDefault();
+                
+                let elements = form.elements;
 
                 let store = {
                     name: elements.name.value,
