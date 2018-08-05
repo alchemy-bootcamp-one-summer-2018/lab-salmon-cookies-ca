@@ -1,0 +1,45 @@
+h1 {
+    color:#6C6F71;
+}
+
+body {
+    font-weight: 700;
+    font-size: 20px;
+    color:#6C6F71;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJSJSf3mG9_a7Q2RdT9EL4hSrKuSoaMilmgnljsllmU8xsoQUk");
+
+}
+
+.table {
+    border-collapse:collapse;
+    border-spacing:0;
+    border-color:#A5A5A5;
+    margin:0px auto;
+    table-layout: relative
+    ; 
+    width: 80%;
+    margin:auto;
+}
+
+.top-row {
+    background-color:#F6C28B;
+}
+.table td{
+    font-family:sans-serif;
+    font-size:12px;
+    padding:5px 5px;
+    border-style:solid;
+    border-width:1px;
+    border-color:#A5A5A5;
+    color:#333;
+    background-color:#FEFCFB;
+}
+
+.table th{font-family: sans-serif;
+    font-size:14px;font-weight:normal;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    border-color:#A5A5A5;
+    background-color:#F6C28B;
+}

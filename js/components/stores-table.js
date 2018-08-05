@@ -8,7 +8,8 @@
     let template = function() {
         return html`
             <section>
-                <table>
+            <p>Come visit our locations!</p>
+                <table class="table">
                 <thead>
                 <tr>
                 <th>Locations</th>
@@ -32,7 +33,6 @@
                 </thead>
                 </table>
                 </section>
-            <p>Come visit one of <span class="store-count">  locations!</p>
             </table>
             </section>
         `;    
