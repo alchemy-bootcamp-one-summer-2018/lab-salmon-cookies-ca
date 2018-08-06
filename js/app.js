@@ -40,7 +40,7 @@
                     <br> 12345 Main St
                     <br> Portland, OR 97220
                     <br> 12:02am - 11:58pm
-                    <br> (877) read - FISH
+                    <br> (877) GET - FISH
                     <br>
                     <a style="color: rgba(239, 132, 105, 1);" href="https://www.youtube.com/watch?v=i9SSOWORzw4">somethingisfishy@aol.com</a>
                 </p>
@@ -52,7 +52,7 @@
             <main>
                 <h2 style="font-size: 46px;">Our Partners</h2>
             </main>
-            
+
             <footer>
                 <img src="/images/salmon-icon.png" width="72">
                 <p> &copy; 2018 Salmon Industries - All Rights Reserved</p>
