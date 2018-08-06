@@ -1,3 +1,6 @@
+<!-- markdownlint-disable -->
+
+
 # Component Architecture Salmon Cookies
 
 Recreate the salmon cookies lab from scratch using the VanillaJS Component Architecture we used in class.
