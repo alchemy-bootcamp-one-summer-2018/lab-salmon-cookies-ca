@@ -1,0 +1,24 @@
+header {
+    background-color: white
+}
+div {
+    display: block;
+    background-color: white
+}
+body {
+    background-color: salmon
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: monospace
+}
+p {
+    font-family:monospace
+}
+footer {
+    background-color: white
+}
