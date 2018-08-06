@@ -1,10 +1,13 @@
-(function(module) {
+'use strict';
+
+(function(module){
 
     let html = module.html;
-    let template = function() {
-        return html`        
+
+    let template = store => {
+        return html`
             <tr>
-                <td>${store.name}</td>
+                <td class="name">${store.name}</td>
                 <td>${store.cookiesByHour[0]}</td>
                 <td>${store.cookiesByHour[1]}</td>
                 <td>${store.cookiesByHour[2]}</td>
@@ -18,8 +21,7 @@
                 <td>${store.cookiesByHour[10]}</td>
                 <td>${store.cookiesByHour[11]}</td>
                 <td>${store.cookiesByHour[12]}</td>
-                <td class="end-totals" style="background: navy; color: rgba(192, 192, 192, 1)">
-                    ${store.cookiesPerDay}    </td>
+                <td class="cell-totals">${store.totalCookiesSold}</td>
             </tr>
         `;
     };
@@ -27,7 +29,6 @@
     class StoreRow {
         constructor(props) {
             this.store = props.store;
-            this.onRemove = props.onRemove;
         }
 
         render() {
