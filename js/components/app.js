@@ -32,6 +32,7 @@
            
             
             let stores = storeApi.load();
+            
             let storeTable = new StoreTable({  
                 stores: stores
             });
@@ -46,10 +47,7 @@
                     // });
                 }
             });
-            
-            console.log(storeForm);
-            
-            
+           
             main.appendChild(storeForm.render());
             main.appendChild(storeTable.render());
 
