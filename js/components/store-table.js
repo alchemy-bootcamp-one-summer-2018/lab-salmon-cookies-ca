@@ -9,7 +9,7 @@
         return html`
         <section>
             <h2>Cookies Sold Per Hour by Location</h2>
-            <table>
+            <table class="cookies-per-location">
                 <thead>
                     <tr>
                         <td class="name dark-cells">Stores</td>

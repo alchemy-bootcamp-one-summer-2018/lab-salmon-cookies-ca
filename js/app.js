@@ -17,14 +17,12 @@
                     <h1 class="head-title">Salmon Industries</h1>
                 </a>
                 <nav>
-                
-                
                     <ul>
                         <li>
-                            <a class="active" href="/index.html" title="Home">Home</a>
+                            <a href="/index.html" title="Home">Home</a>
                         </li>
                         <li>
-                            <a href="/pages/sales.html" title="Sales">Sales</a>
+                            <a class="active" href="/pages/sales.html" title="Sales">Sales</a>
                         </li>
                         <li>
                             <a href="/pages/products.html" title="Product Gallery">Product Gallery</a>
@@ -36,8 +34,6 @@
                             <a href="/pages/contact.html" title="Contact">Contact</a>
                         </li>
                     </ul>
-                
-                
                 </nav>
             
                 <p class="core-info">
@@ -56,6 +52,11 @@
             <main>
                 <h2 style="font-size: 46px;">Our Partners</h2>
             </main>
+            
+            <footer>
+                <img src="/images/salmon-icon.png" width="72">
+                <p> &copy; 2018 Salmon Industries - All Rights Reserved</p>
+            </footer>
         `;
     };
     

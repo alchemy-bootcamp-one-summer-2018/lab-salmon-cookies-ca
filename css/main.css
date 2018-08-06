@@ -23,7 +23,7 @@
 }
 
 html {
-    background: #F2F2F2;
+    background: rgba(25, 25, 112, 1);
     overflow-y: scroll;
 
 }
@@ -32,9 +32,9 @@ body {
     font-family: Saira, sans-serif;
     font-size: 1em;
     color: #000000;
-    max-width: 1200px;
     background: rgba(192, 192, 192, 1);
     margin: auto;
+
 }
 
 div#root {
@@ -45,11 +45,6 @@ div#root {
 main {
     margin-top: 7.8em;
     min-height: 5em;
-}
-
-/* for highlighting old work that I'm leaving for now */
-main.old {
-    background-color: purple;
 }
 
 h1,h2,h3 {
@@ -139,9 +134,9 @@ h3#store-counter {
 
 }
 
-.logo-container img {
+/* .logo-container img {
     display: block;
-}
+} */
 
 .logo-container.head-title {
     padding: 0;
@@ -264,7 +259,6 @@ li a:hover {
 
 @media screen and (min-width : 1200px) {
     body {
-        max-width: 1200px;
         margin: auto;
     }
 
@@ -283,6 +277,7 @@ table {
     border: solid rgba(25, 25, 112, 1);
     background-color: rgba(232,232,232,1);
     margin: auto;
+    margin-bottom: 30px;
     padding: 10px;
 }
 
