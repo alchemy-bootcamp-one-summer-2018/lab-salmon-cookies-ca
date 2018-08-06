@@ -6,6 +6,7 @@
     let StoreForm = module.StoreForm;
     let StoreCounter = module.StoreCounter;
     let StoreTable = module.StoreTable;
+    let storeAPI = module.storeAPI;
 
 
     let template = function() {
@@ -23,10 +24,23 @@
             let dom = template();
             let main = dom.querySelector('main');
 
-            let storeForm = new StoreForm;
-            let storeCounter = new StoreCounter;
-            let storeTable = new StoreTable;
+            let stores = storeAPI.read();
 
+    
+
+
+
+            let storeForm = new StoreForm;
+            let storeCounter = new StoreCounter(
+                {
+                    count: storeAPI.read().length,
+                }
+            );
+            let storeTable = new StoreTable(
+                {
+                    stores: stores,
+                }
+            );
 
             main.appendChild(storeForm.render());
             main.appendChild(storeCounter.render());

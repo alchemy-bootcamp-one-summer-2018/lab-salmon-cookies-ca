@@ -2,11 +2,27 @@
 
 (function(module) {
 
-    let stores;
+    let stores, stats;
 
-    createStores();
+    let storeAPI = {
 
-    function createStores() {
+        create: 'I need to be defined',
+
+        read: function() {
+            return stores;
+        },
+
+        update: 'I need to be defined',
+
+        delete: 'I need to be defined',
+
+    };
+
+    createData();
+    cookiesByHourTotals(stores, stats, 0, 'cookiesByHour', 'cookiesPerDay');
+
+
+    function createData() {
 
         stores = [
             {
@@ -45,25 +61,41 @@
                 cookiesPerCust: 4.6,
             },
         ];
+        
+        stats = [
+            {
+                name: 'Hourly Totals for All Locations',
+                cookiesByHour: [],
+                cookiesPerDay: [],
+            }
+        ];
     }
 
-    let storeAPI = {
+    function cookiesByHourTotals(storeArray, statsArray, statIndex, stat1, stat2) {
+        for(let i = 0; i < 13; i++) {
+            let columnTotal = 0;
+            for(let j = 0; j < storeArray.length; j++) {
+                columnTotal += storeArray[j]['cookiesByHour'][i];
+            }
+            statsArray[statIndex][stat1][i] = columnTotal;
+        }
 
-        create: 'I need to be defined', 
+        // this should be a separate function called cookiesPerDayTotals or cookiesByHourTotalsTotal
+        let rowSum = 0;
 
-        read: function() {
-            return stores;
-        },
+        for(let hr = 0; hr < 13; hr++) {
+            rowSum += statsArray[statIndex][stat1][hr];
+        }
+        statsArray[statIndex][stat2].push(rowSum);
+    }
 
-        update: 'I need to be defined',
+    module.cookiesByHourTotals = cookiesByHourTotals;
+        
+    module.stats = stats;
 
-        delete: 'I need to be defined',
-
-    };
+    module.storeAPI = storeAPI;
 
     // expose for dev purposes:
     window.resetStores = createStores;
-
-    module.storeAPI = storeAPI;
 
 })(window.module = window.module || {});

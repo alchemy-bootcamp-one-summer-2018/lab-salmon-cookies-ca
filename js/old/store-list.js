@@ -40,7 +40,7 @@
     };
 
 
-    let renderHeader = function () {
+    let renderHeader = function() {
         return toDOM(html`        
             <tr>
                 <th>Locations</th>
