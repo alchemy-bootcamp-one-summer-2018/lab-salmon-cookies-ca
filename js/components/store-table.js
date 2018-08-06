@@ -12,21 +12,21 @@
             <table>
                 <thead>
                     <tr>
-                        <td class="name">Stores</td>
-                        <td>7 am</td>
-                        <td>8 am</td>
-                        <td>9 am</td>
-                        <td>10 am</td>
-                        <td>11 am</td>
-                        <td>12 am</td>
-                        <td>1 pm</td>
-                        <td>2 pm</td>
-                        <td>3 pm</td>
-                        <td>4 pm</td>
-                        <td>5 pm</td>
-                        <td>6 pm</td>
-                        <td>7 pm</td>
-                        <td class="cell-totals">Daily Totals</td>
+                        <td class="name dark-cells">Stores</td>
+                        <td class="dark-cells">7 am</td>
+                        <td class="dark-cells">8 am</td>
+                        <td class="dark-cells">9 am</td>
+                        <td class="dark-cells">10 am</td>
+                        <td class="dark-cells">11 am</td>
+                        <td class="dark-cells">12 am</td>
+                        <td class="dark-cells">1 pm</td>
+                        <td class="dark-cells">2 pm</td>
+                        <td class="dark-cells">3 pm</td>
+                        <td class="dark-cells">4 pm</td>
+                        <td class="dark-cells">5 pm</td>
+                        <td class="dark-cells">6 pm</td>
+                        <td class="dark-cells">7 pm</td>
+                        <td class="dark-cells">Daily Totals</td>
                     </tr>
                 </thead>
                 <tbody></tbody>

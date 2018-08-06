@@ -297,7 +297,7 @@ th {
     color: rgba(192, 192, 192, 1);
 }
 
-td.cell-totals {
+td.dark-cells {
     background-color: rgba(25, 25, 112, 1);
     font-weight: bold;
     color: rgba(192, 192, 192, 1);

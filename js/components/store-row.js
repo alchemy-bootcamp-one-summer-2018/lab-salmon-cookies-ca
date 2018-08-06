@@ -21,7 +21,7 @@
                 <td>${store.cookiesByHour[10]}</td>
                 <td>${store.cookiesByHour[11]}</td>
                 <td>${store.cookiesByHour[12]}</td>
-                <td class="cell-totals">${store.totalCookiesSold}</td>
+                <td class="dark-cells">${store.totalCookiesSold}</td>
             </tr>
         `;
     };
