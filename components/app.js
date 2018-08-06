@@ -21,7 +21,6 @@
             `;
     };
 
-//load data create store list and  store from, update list
     class App {
         render() {
             let dom = template();

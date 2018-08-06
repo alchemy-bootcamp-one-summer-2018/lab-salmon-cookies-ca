@@ -9,10 +9,14 @@
         return html`
 
         <form>
-        <p><input class="input" name="location" label="Store Location"></p>
-        <p><input class="input" name="min" label="Minimum Customer"></p>
-        <p><input class="input" name="max" label="Max Customer"></p>
-        <p><input class="input" name="avg" label="Average Sale"></p>
+        <p>Store Location <br>
+        <input class="input" name="location" label="Store Location"></p>
+        <p>Minimum Customer<br>
+        <input class="input" name="min" label="Minimum Customer"></p>
+        <p>Maximum Customer<br>
+        <input class="input" name="max" label="Max Customer"></p>
+        <p>Average Sales<br>
+        <input class="input" name="avg" label="Average Sale"></p>
      
         <button id="submit" type="submit"> Calculate </button>
         </form> 
@@ -44,7 +48,8 @@
                     key: elements.location.value
                 };
 
-            //     store = hourlyStoreTotals(store);
+            // This is where I left off if I add it, it will break it      
+            //store = getCustomerPerHours(store);
 
             //     try {
             //         this.onAdd(store);
