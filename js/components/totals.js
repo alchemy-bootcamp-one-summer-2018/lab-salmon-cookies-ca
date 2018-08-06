@@ -26,7 +26,8 @@
     };
 
 
-    class StoreCard {
+
+    class Totals {
         constructor(props) {
             this.store = props.store;
         }
@@ -37,6 +38,7 @@
         }
     }
 
-    module.StoreCard = StoreCard;
-
+    module.Totals = Totals;
+    module.getTotals = getTotals;
+    
 })(window.module = window.module || {});

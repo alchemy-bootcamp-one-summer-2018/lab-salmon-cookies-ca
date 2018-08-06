@@ -13,28 +13,28 @@
                 <p>
                     <label>
                         Location:
-                        <input name="text" required><sup>*</sup>
+                        <input name="location" required><sup>*</sup>
                     </label>
                 </p>
 
                 <p>
                     <label>
                         Minimum Customers Per Hour:
-                        <input name="text" required><sup>*</sup>
+                        <input name="min" required><sup>*</sup>
                     </label>
                 </p>
 
                 <p>
                     <label>
                         Maximum Customers Per Hour:
-                        <input name="text" required><sup>*</sup>
+                        <input name="max" required><sup>*</sup>
                     </label>
                 </p>
 
                 <p>
                     <label>
-                            Average Cookies Sold Per Hour:
-                            <input name="text" required><sup>*</sup>
+                        Average Cookies Sold Per Hour:
+                        <input name="avgCookiesSoldPerHour" required><sup>*</sup>
                     </label>
                 </p>
 
@@ -62,6 +62,8 @@
 
             form.addEventListener('submit', (event) =>{
                 event.preventDefault();
+
+                console.log('input', elements.location.value);
 
                 //is this ok?  i copied it from yesterdayyyyy
                 let store = {

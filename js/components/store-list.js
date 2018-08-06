@@ -4,6 +4,7 @@
 
     let html = module.html;
     let StoreCard = module.StoreCard;
+    let getTotals = module.getTotals;
     
     let template = function() {
         return html `
@@ -57,13 +58,21 @@
 
             this.lastStores = stores.slice();
         }
-    
+    //creating store module info for footer needs to come here
         renderStore(store) {
             let storeCard = new StoreCard({
                 store: store,
             });
 
             this.tbody.appendChild(storeCard.render());
+        }
+
+        // renderTotals(totals) {
+        //     let getTotals = new getTotals({
+        //         totals: totals,
+        //     });
+
+        //     this.tfoot.appendChild(getTotals.render());
         }
     
         render() {
@@ -78,8 +87,6 @@
             return dom;
         }
     }
-
-    console.log('store list:', StoreList);
 
     module.StoreList = StoreList;
 
