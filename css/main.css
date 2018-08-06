@@ -129,3 +129,15 @@ footer {
   .flex-box-vertical--bottom {
     align-self: flex-end;
   }
+
+  .bar {
+    fill: steelblue;
+  }
+  
+  .bar:hover {
+    fill: brown;
+  }
+  
+  .axis--x path {
+    display: none;
+  }

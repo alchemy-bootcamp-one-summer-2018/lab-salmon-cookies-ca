@@ -9,27 +9,7 @@
     // header of html file
     let template = function() {
         return html`
-        <div class="wrapper">
-            <header>
-                <h1> Salmon Cookies</h1>
-                <nav>
-                    <ul>
-                        <li><a href=".." class="current">home</a></li> 
-                        <li><a href="">menu</a></li>
-                        <li><a href="">about</a></li>
-                        <li><a href="">contact</a></li>
-                        <li><a href="">data</a></li>
-                    </ul> 
-                </nav>
-            </header>
-            <div class = "company-name">
-                    Pat's Salmon Cookies Sales Data
-            </div>
             <main></main>
-            <footer>
-                &copy; 2018 Salmon Cookies
-            </footer>
-        </div>
         `;
     };
 

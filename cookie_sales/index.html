@@ -8,18 +8,41 @@
 </head>
 <body>
     <div class="wrapper">
-        <div id="root"></div>
-    </div>
+        <header>
+            <h1> Salmon Cookies</h1>
+            <nav>
+                <ul>
+                    <li><a href="" class="current">home</a></li> 
+                    <li><a href="">menu</a></li>
+                    <li><a href=about.html>about</a></li>
+                    <li><a href=contact.html>contact</a></li>
+                    <li><a href="cookie_sales/index.html">data</a></li>
+                </ul> 
+            </nav>
+        </header>
+        <div class = "company-name">
+            Salmon Cookies
+        </div>
+        <div class="flex-box-wrapper">
+            <div class ="flex-box-vertical">
+                <root id='root'></root>
+                <article class = 'd3' id = 'chart'></article>
 
-    <script src="js/html.js"></script>
-    <script src="js/store-api.js"></script>
-    <script src="js/components/store-table.js"></script>
-    <script src="js/components/grand-totals.js"></script>
-    <script src="js/components/store-list.js"></script>
-    <script src="js/components/store-form.js"></script>
-    <script src="js/components/app.js"></script>
-    <script src="js/index.js"></script>
+
 </body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script src="js/html.js"></script>
+<script src="js/store-api.js"></script>
+<script src="js/components/store-table.js"></script>
+<script src="js/components/grand-totals.js"></script>
+<script src="js/components/store-list.js"></script>
+<script src="js/components/store-form.js"></script>
+<script src="js/components/app.js"></script>
+<script src="js/components/chart.js"></script>
+<script src="js/index.js"></script>
 
-
+<footer>
+        &copy; 2018 Salmon Cookies
+</footer>
 </html>

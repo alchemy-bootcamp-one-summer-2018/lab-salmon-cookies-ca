@@ -21,6 +21,8 @@
                 columnTotals[i] += cookies;
             }
         }
+        module.columnTotals = columnTotals;
+        console.log(columnTotals);
         return columnTotals;
     };
 
@@ -45,6 +47,7 @@
 
         return html`${rowString}`;
     };
+
 
     class Footer {
         constructor(props) {

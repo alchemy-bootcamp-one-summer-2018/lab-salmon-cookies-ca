@@ -8,6 +8,21 @@
     // create store label (column 0)
         let rowString = ' <tr> <td> <button>ⓧ</button>' + store.location + '</td>';
 
+        // create column entries for store cookie hourly data
+        let cookies = 0;
+        for(let i = 0; i < 14; i++){
+            cookies = store.hours[i];
+            rowString += '<td>' + cookies + '</td>';
+        }
+        // create store total entry
+        rowString += '<td>' + rowTotals(store) + '</td> </tr>';
+
+        return html`${rowString}`;
+    };
+
+    // create all the rows in table
+    let rowTotals = function(store) {
+
         // create a counter variable for the total cookies for that store
         let store_total = 0;
 
@@ -15,13 +30,9 @@
         let cookies = 0;
         for(let i = 0; i < 14; i++){
             cookies = store.hours[i];
-            rowString += '<td>' + cookies + '</td>';
             store_total += cookies;
         }
-        // create store total entry
-        rowString += '<td>' + store_total + '</td> </tr>';
-
-        return html`${rowString}`;
+        return store_total;
     };
 
     class StoreRow {
@@ -40,6 +51,10 @@
             });
 
             return dom;
+        }
+
+        rowTotaling() {
+            return rowTotals(this.store);
         }
     }
 

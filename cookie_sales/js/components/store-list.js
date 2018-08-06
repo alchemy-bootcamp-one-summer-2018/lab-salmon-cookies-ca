@@ -1,3 +1,5 @@
+/* global updateD3 */
+
 'use strict';
 
 (function(module) {
@@ -78,6 +80,11 @@
                 this.replaceFooter(stores);
             }
 
+            // update d3 chart
+            var element = document.getElementById('chart');
+            element.innerHTML = '';
+            updateD3(stores);
+
             // update the "last" know Stores we saw
             this.lastStores = stores.slice();
         }
@@ -121,6 +128,9 @@
 
             this.tfoot = dom.querySelector('tfoot');
             this.tfoot.appendChild(this.updateFooter(stores));
+
+            //display d3 chart
+            updateD3(stores);
             return dom;
         }
 
