@@ -10,7 +10,7 @@
     let template = function() {
         return html`
             <header>
-                <h1>Pat's Salmon Cookie Stores</h1>;
+                <h1>Pat's Salmon Cookie Sales Table</h1>;
             </header>
 
             <main></main>
