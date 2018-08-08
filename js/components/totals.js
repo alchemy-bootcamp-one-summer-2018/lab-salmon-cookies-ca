@@ -39,6 +39,6 @@
     }
 
     module.Totals = Totals;
-    module.getTotals = getTotals;
+    // module.getTotals = getTotals;
     
 })(window.module = window.module || {});

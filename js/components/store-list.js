@@ -58,7 +58,7 @@
 
             this.lastStores = stores.slice();
         }
-    //creating store module info for footer needs to come here
+        //creating store module info for footer needs to come here
         renderStore(store) {
             let storeCard = new StoreCard({
                 store: store,
@@ -73,7 +73,6 @@
         //     });
 
         //     this.tfoot.appendChild(getTotals.render());
-        }
     
         render() {
             let stores = this.stores;
