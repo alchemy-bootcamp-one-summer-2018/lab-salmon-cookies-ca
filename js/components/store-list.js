@@ -4,7 +4,7 @@
 
     let html = module.html;
     let StoreCard = module.StoreCard;
-    let getTotals = module.getTotals;
+    // let getTotals = module.getTotals;
     
     let template = function() {
         return html `
