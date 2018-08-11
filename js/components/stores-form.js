@@ -49,6 +49,7 @@
                 event.preventDefault();
             
                 let elements = form.elements;
+                console.log('elements', elements);
 
                 let store = {
                     name: elements.name.value,

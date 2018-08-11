@@ -25,7 +25,7 @@
                 <td>${store.hours[12]}</td>
                 <td>${store.hours[13]}</td>
                 <td>${store.hours[14]}</td>
-                <td>${store.total}</td>
+                <td>${store.dailyTotal}</td>
                 </tr>
             </tbody>
         `;
