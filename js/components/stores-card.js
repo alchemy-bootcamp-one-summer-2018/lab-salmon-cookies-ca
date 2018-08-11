@@ -3,7 +3,6 @@
 (function(module) {
     let html = module.html;
 
-
     let template = function(store) {
 
         return html`

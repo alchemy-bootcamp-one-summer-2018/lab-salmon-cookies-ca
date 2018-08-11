@@ -21,8 +21,11 @@
     class App { 
         render() {
             let dom = template();
+
             let main = dom.querySelector('main');
+
             let stores = storesApi.load();
+            
             let storesTable = new StoresTable({
                 stores: stores
             });

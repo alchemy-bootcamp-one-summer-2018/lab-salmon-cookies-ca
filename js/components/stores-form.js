@@ -25,11 +25,10 @@
                 <input type="text" name="Avg" required>
 
                 <p>
-                    <button>Add</button>
+                    <button>Add Store</button>
                 </p>
-
+                <p class="error"></p>
             </form>
-            <p class="error"></p>
         </section>
    `; 
     };
@@ -49,7 +48,6 @@
                 event.preventDefault();
             
                 let elements = form.elements;
-                console.log('elements', elements);
 
                 let store = {
                     name: elements.name.value,
@@ -67,7 +65,6 @@
                 }
                 catch(err) {
                     console.log(err);
-                    // error.textContent = err.message;
                 }
             });
             return dom;

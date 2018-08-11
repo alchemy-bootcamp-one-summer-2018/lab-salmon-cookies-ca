@@ -2,14 +2,16 @@
 
 (function(module) {
     let html = module.html;
+    // let footer = module.footer;
     let StoresCard = module.StoresCard;
+    let Totals = module.totals;
 
 
     let template = function() {
         return html`
-            <section>
+        <section>
             <p>Come visit our locations!</p>
-                <table class="table">
+            <table class="table">
                 <thead>
                     <tr>
                         <th>Locations</th>
@@ -31,10 +33,14 @@
                         <th>Totals</th>
                     </tr>
                 </thead>
-                </table>
-                </section>
+                <tbody id="tbody">
+                </tbody>
+                <tfoot>
+                    <tr id="tfoot-row">
+                    </tr>
+                </tfoot>
             </table>
-            </section>
+        </section>
         `;    
     };
                  
@@ -44,11 +50,13 @@
         constructor(props){
             this.stores = props.stores;
             this.lastStores = this.stores.slice();
+
         }   
 
         update(props) {
             let stores = props.stores;
             let lastStores = this.lastStores;
+
 
             //update if new store is added
             for(let i = 0; i < stores.length; i++) {
@@ -58,7 +66,10 @@
 
                 this.updateStore(store);
             }
+            this.replaceFooter(stores);
+            //   this.updateCount(stores.length);
             this.lastStores = stores.slice();
+
         }
 
         updateStore(store) {
@@ -66,16 +77,32 @@
                 store: store
             });
             this.table.appendChild(storesCard.render());
+        
         }
+
+        updateTotals(stores) {
+            let totals = new Totals ({
+                stores: stores
+            });
+
+            this.tbody.appendChild(totals.render());
+        }
+        // updateFooter(props) {
+        //     let stores = props;
+        //     let Footer = new footer({
+        //         stores: stores
+        //     });
+        //     return Footer.render();
+        // }
+
         render() {
             let dom = template();
             let stores = this.stores;
             this.table = dom.querySelector('table');
-
             for(let i = 0;i < stores.length; i++) {
                 this.updateStore(stores[i]);
             }
-
+            
             return dom;
         }
     
