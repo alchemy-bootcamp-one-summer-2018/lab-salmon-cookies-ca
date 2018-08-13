@@ -15,14 +15,11 @@
             <main></main>
         `;
     };
-    console.log('helloworld');
 
 
     class App {
 
         render() {
-
-            console.log('inside app');
             let dom = template();
 
             let main = dom.querySelector('main');
@@ -32,7 +29,6 @@
             let storeList = new StoreList({
                 stores: stores
             });
-            console.log(stores);
         
             let storeForm = new StoreForm({
                 onAdd: function(store) {
@@ -43,7 +39,7 @@
                 }
             });
 
-            // main.appendChild(storeList.render());
+            main.appendChild(storeList.render());
             main.appendChild(storeForm.render());
             return dom;
             

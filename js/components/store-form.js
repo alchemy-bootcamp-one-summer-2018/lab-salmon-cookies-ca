@@ -89,8 +89,8 @@
                     this.onAdd(store);
 
                     // #4 Process success or failure
-                    // form.reset();
-                    // document.activeElement.blur();
+                    form.reset();
+                    document.activeElement.blur();
                 }
                 catch(err) {
                     // #4 Process success or failure

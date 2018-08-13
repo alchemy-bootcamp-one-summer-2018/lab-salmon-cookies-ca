@@ -1,3 +1,44 @@
 h1 {
-    color: steelblue;
+    color:#3A5559;
+}
+
+body {
+    font-weight: 650;
+    font-size: 15px;
+    color:#FFA8A8;
+    
+}
+
+.table {
+    border-collapse:collapse;
+    border-spacing:0;
+    border-color:#3A5559;
+    margin:0px auto;
+    table-layout: relative
+    ; 
+    width: 80%;
+    margin:auto;
+}
+
+.top-row {
+    background-color:#FFA8A8;
+}
+.table td{
+    font-family:sans-serif;
+    font-size:12px;
+    padding:5px 5px;
+    border-style:solid;
+    border-width:1px;
+    border-color:#3A5559;
+    color:3A5559;
+    background-color:#FEFCFB;
+}
+
+.table th{font-family: sans-serif;
+    font-size:14px;font-weight:normal;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:1px;
+    border-color:3A5559;
+    background-color:#FFA8A8;
 }

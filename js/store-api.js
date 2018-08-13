@@ -64,6 +64,15 @@
         },
         add: function(store) {
             stores.push(store);
+        },
+        remove: function(store) {
+            for(let i = 0; i < store; i++) {
+                if(stores[i] === store) {
+                    stores.splice(i, 1);
+                    break;
+                
+                }
+            }
         }
           
     };
