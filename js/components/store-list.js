@@ -41,7 +41,6 @@
             </section>
         `;
     };
-
     class StoreList {
         
         constructor(props) {
@@ -71,7 +70,7 @@
                 store: store
             });
         
-            this.form.appendChild(storeRow.render());
+            this.tBody.appendChild(storeRow.render());
             
         }
 
@@ -87,7 +86,7 @@
         render() {
             let dom = template();
             let store = this.stores;
-            this.form = dom.querySelector('form');
+            this.tBody = dom.querySelector('tBody');
             
             for(let i = 0; i < store.length; i++) {
                 this.updateStore(store[i]);
